@@ -1,0 +1,11 @@
+{
+  "name": "medusa-mcp-server",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "DoorDash-themed Medusa commerce MCP server",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.3",
+    "zod": "^3.22.4"
+  }
+}

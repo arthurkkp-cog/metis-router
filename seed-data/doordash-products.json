@@ -1,0 +1,624 @@
+[
+  {
+    "title": "Dragon Roll",
+    "handle": "dragon-roll-sakura-sushi",
+    "description": "Tempura shrimp, avocado, cucumber topped with eel and spicy mayo",
+    "collection_handle": "sakura-sushi",
+    "variants": [
+      {
+        "title": "Regular (8 pcs)",
+        "prices": [{ "amount": 1699, "currency_code": "usd" }],
+        "inventory_quantity": 100
+      },
+      {
+        "title": "Large (12 pcs)",
+        "prices": [{ "amount": 2299, "currency_code": "usd" }],
+        "inventory_quantity": 100
+      }
+    ]
+  },
+  {
+    "title": "Spicy Tuna Roll",
+    "handle": "spicy-tuna-roll-sakura-sushi",
+    "description": "Fresh tuna, spicy mayo, cucumber, sesame seeds",
+    "collection_handle": "sakura-sushi",
+    "variants": [
+      {
+        "title": "Regular (8 pcs)",
+        "prices": [{ "amount": 1499, "currency_code": "usd" }],
+        "inventory_quantity": 100
+      },
+      {
+        "title": "Large (12 pcs)",
+        "prices": [{ "amount": 1999, "currency_code": "usd" }],
+        "inventory_quantity": 100
+      }
+    ]
+  },
+  {
+    "title": "California Roll",
+    "handle": "california-roll-sakura-sushi",
+    "description": "Imitation crab, avocado, cucumber with tobiko",
+    "collection_handle": "sakura-sushi",
+    "variants": [
+      {
+        "title": "Regular (8 pcs)",
+        "prices": [{ "amount": 1299, "currency_code": "usd" }],
+        "inventory_quantity": 100
+      }
+    ]
+  },
+  {
+    "title": "Chicken Teriyaki Bento",
+    "handle": "chicken-teriyaki-bento-sakura-sushi",
+    "description": "Grilled chicken glazed in house teriyaki sauce, served with rice and salad",
+    "collection_handle": "sakura-sushi",
+    "variants": [
+      {
+        "title": "Regular",
+        "prices": [{ "amount": 1599, "currency_code": "usd" }],
+        "inventory_quantity": 100
+      },
+      {
+        "title": "Large",
+        "prices": [{ "amount": 1999, "currency_code": "usd" }],
+        "inventory_quantity": 100
+      }
+    ]
+  },
+  {
+    "title": "Miso Soup",
+    "handle": "miso-soup-sakura-sushi",
+    "description": "Traditional dashi broth with tofu, wakame seaweed, and scallions",
+    "collection_handle": "sakura-sushi",
+    "variants": [
+      {
+        "title": "Cup",
+        "prices": [{ "amount": 399, "currency_code": "usd" }],
+        "inventory_quantity": 200
+      },
+      {
+        "title": "Bowl",
+        "prices": [{ "amount": 599, "currency_code": "usd" }],
+        "inventory_quantity": 200
+      }
+    ]
+  },
+  {
+    "title": "Edamame",
+    "handle": "edamame-sakura-sushi",
+    "description": "Steamed soybeans with sea salt",
+    "collection_handle": "sakura-sushi",
+    "variants": [
+      {
+        "title": "Regular",
+        "prices": [{ "amount": 599, "currency_code": "usd" }],
+        "inventory_quantity": 150
+      }
+    ]
+  },
+  {
+    "title": "Classic Smash Burger",
+    "handle": "classic-smash-burger-burger-barn",
+    "description": "Two smashed beef patties, American cheese, pickles, onions, special sauce on a brioche bun",
+    "collection_handle": "burger-barn",
+    "variants": [
+      {
+        "title": "Single",
+        "prices": [{ "amount": 1099, "currency_code": "usd" }],
+        "inventory_quantity": 100
+      },
+      {
+        "title": "Double",
+        "prices": [{ "amount": 1399, "currency_code": "usd" }],
+        "inventory_quantity": 100
+      }
+    ]
+  },
+  {
+    "title": "Bacon BBQ Burger",
+    "handle": "bacon-bbq-burger-burger-barn",
+    "description": "Angus patty, applewood smoked bacon, cheddar, crispy onion rings, BBQ sauce",
+    "collection_handle": "burger-barn",
+    "variants": [
+      {
+        "title": "Regular",
+        "prices": [{ "amount": 1599, "currency_code": "usd" }],
+        "inventory_quantity": 100
+      }
+    ]
+  },
+  {
+    "title": "Truffle Fries",
+    "handle": "truffle-fries-burger-barn",
+    "description": "Hand-cut fries tossed in truffle oil and parmesan with garlic aioli",
+    "collection_handle": "burger-barn",
+    "variants": [
+      {
+        "title": "Regular",
+        "prices": [{ "amount": 899, "currency_code": "usd" }],
+        "inventory_quantity": 150
+      },
+      {
+        "title": "Large",
+        "prices": [{ "amount": 1199, "currency_code": "usd" }],
+        "inventory_quantity": 150
+      }
+    ]
+  },
+  {
+    "title": "Milkshake",
+    "handle": "milkshake-burger-barn",
+    "description": "Hand-spun thick milkshake with whipped cream",
+    "collection_handle": "burger-barn",
+    "variants": [
+      {
+        "title": "Vanilla",
+        "prices": [{ "amount": 799, "currency_code": "usd" }],
+        "inventory_quantity": 100
+      },
+      {
+        "title": "Chocolate",
+        "prices": [{ "amount": 799, "currency_code": "usd" }],
+        "inventory_quantity": 100
+      },
+      {
+        "title": "Strawberry",
+        "prices": [{ "amount": 799, "currency_code": "usd" }],
+        "inventory_quantity": 100
+      }
+    ]
+  },
+  {
+    "title": "Margherita Pizza",
+    "handle": "margherita-pizza-napoli-express",
+    "description": "San Marzano tomatoes, fresh mozzarella, basil, extra virgin olive oil on hand-tossed dough",
+    "collection_handle": "napoli-express",
+    "variants": [
+      {
+        "title": "Personal (10\")",
+        "prices": [{ "amount": 1199, "currency_code": "usd" }],
+        "inventory_quantity": 100
+      },
+      {
+        "title": "Medium (14\")",
+        "prices": [{ "amount": 1499, "currency_code": "usd" }],
+        "inventory_quantity": 100
+      },
+      {
+        "title": "Large (18\")",
+        "prices": [{ "amount": 1999, "currency_code": "usd" }],
+        "inventory_quantity": 100
+      }
+    ]
+  },
+  {
+    "title": "Pepperoni Pizza",
+    "handle": "pepperoni-pizza-napoli-express",
+    "description": "Crispy cup-and-char pepperoni, mozzarella, house red sauce",
+    "collection_handle": "napoli-express",
+    "variants": [
+      {
+        "title": "Personal (10\")",
+        "prices": [{ "amount": 1299, "currency_code": "usd" }],
+        "inventory_quantity": 100
+      },
+      {
+        "title": "Medium (14\")",
+        "prices": [{ "amount": 1599, "currency_code": "usd" }],
+        "inventory_quantity": 100
+      },
+      {
+        "title": "Large (18\")",
+        "prices": [{ "amount": 2199, "currency_code": "usd" }],
+        "inventory_quantity": 100
+      }
+    ]
+  },
+  {
+    "title": "Garlic Knots",
+    "handle": "garlic-knots-napoli-express",
+    "description": "Hand-tied dough knots brushed with garlic butter and herbs, served with marinara",
+    "collection_handle": "napoli-express",
+    "variants": [
+      {
+        "title": "6 Piece",
+        "prices": [{ "amount": 699, "currency_code": "usd" }],
+        "inventory_quantity": 200
+      },
+      {
+        "title": "12 Piece",
+        "prices": [{ "amount": 1099, "currency_code": "usd" }],
+        "inventory_quantity": 200
+      }
+    ]
+  },
+  {
+    "title": "Caesar Salad",
+    "handle": "caesar-salad-napoli-express",
+    "description": "Romaine hearts, shaved parmesan, croutons, house-made Caesar dressing",
+    "collection_handle": "napoli-express",
+    "variants": [
+      {
+        "title": "Side",
+        "prices": [{ "amount": 799, "currency_code": "usd" }],
+        "inventory_quantity": 100
+      },
+      {
+        "title": "Entree",
+        "prices": [{ "amount": 1099, "currency_code": "usd" }],
+        "inventory_quantity": 100
+      }
+    ]
+  },
+  {
+    "title": "Pad Thai",
+    "handle": "pad-thai-thai-orchid",
+    "description": "Rice noodles stir-fried with egg, bean sprouts, peanuts, and tamarind sauce",
+    "collection_handle": "thai-orchid",
+    "variants": [
+      {
+        "title": "Chicken",
+        "prices": [{ "amount": 1499, "currency_code": "usd" }],
+        "inventory_quantity": 100
+      },
+      {
+        "title": "Shrimp",
+        "prices": [{ "amount": 1699, "currency_code": "usd" }],
+        "inventory_quantity": 100
+      },
+      {
+        "title": "Tofu",
+        "prices": [{ "amount": 1399, "currency_code": "usd" }],
+        "inventory_quantity": 100
+      }
+    ]
+  },
+  {
+    "title": "Green Curry",
+    "handle": "green-curry-thai-orchid",
+    "description": "Coconut milk green curry with bamboo shoots, Thai basil, bell peppers, and jasmine rice",
+    "collection_handle": "thai-orchid",
+    "variants": [
+      {
+        "title": "Chicken",
+        "prices": [{ "amount": 1599, "currency_code": "usd" }],
+        "inventory_quantity": 100
+      },
+      {
+        "title": "Shrimp",
+        "prices": [{ "amount": 1799, "currency_code": "usd" }],
+        "inventory_quantity": 100
+      },
+      {
+        "title": "Tofu",
+        "prices": [{ "amount": 1499, "currency_code": "usd" }],
+        "inventory_quantity": 100
+      }
+    ]
+  },
+  {
+    "title": "Spring Rolls",
+    "handle": "spring-rolls-thai-orchid",
+    "description": "Crispy fried rolls stuffed with glass noodles, cabbage, carrots, served with sweet chili sauce",
+    "collection_handle": "thai-orchid",
+    "variants": [
+      {
+        "title": "4 Piece",
+        "prices": [{ "amount": 799, "currency_code": "usd" }],
+        "inventory_quantity": 150
+      }
+    ]
+  },
+  {
+    "title": "Mango Sticky Rice",
+    "handle": "mango-sticky-rice-thai-orchid",
+    "description": "Sweet coconut sticky rice with fresh mango slices and toasted sesame",
+    "collection_handle": "thai-orchid",
+    "variants": [
+      {
+        "title": "Regular",
+        "prices": [{ "amount": 899, "currency_code": "usd" }],
+        "inventory_quantity": 80
+      }
+    ]
+  },
+  {
+    "title": "Butter Chicken",
+    "handle": "butter-chicken-bombay-kitchen",
+    "description": "Tender chicken in creamy tomato-butter sauce with aromatic spices, served with basmati rice",
+    "collection_handle": "bombay-kitchen",
+    "variants": [
+      {
+        "title": "Regular",
+        "prices": [{ "amount": 1699, "currency_code": "usd" }],
+        "inventory_quantity": 100
+      },
+      {
+        "title": "Family Size",
+        "prices": [{ "amount": 2999, "currency_code": "usd" }],
+        "inventory_quantity": 50
+      }
+    ]
+  },
+  {
+    "title": "Chicken Tikka Masala",
+    "handle": "chicken-tikka-masala-bombay-kitchen",
+    "description": "Tandoori-spiced chicken chunks in rich masala gravy with basmati rice",
+    "collection_handle": "bombay-kitchen",
+    "variants": [
+      {
+        "title": "Regular",
+        "prices": [{ "amount": 1799, "currency_code": "usd" }],
+        "inventory_quantity": 100
+      }
+    ]
+  },
+  {
+    "title": "Garlic Naan",
+    "handle": "garlic-naan-bombay-kitchen",
+    "description": "Freshly baked tandoori naan brushed with garlic butter and cilantro",
+    "collection_handle": "bombay-kitchen",
+    "variants": [
+      {
+        "title": "Single",
+        "prices": [{ "amount": 399, "currency_code": "usd" }],
+        "inventory_quantity": 200
+      },
+      {
+        "title": "3-Pack",
+        "prices": [{ "amount": 999, "currency_code": "usd" }],
+        "inventory_quantity": 200
+      }
+    ]
+  },
+  {
+    "title": "Samosa",
+    "handle": "samosa-bombay-kitchen",
+    "description": "Crispy pastry filled with spiced potatoes and peas, served with mint and tamarind chutneys",
+    "collection_handle": "bombay-kitchen",
+    "variants": [
+      {
+        "title": "2 Piece",
+        "prices": [{ "amount": 599, "currency_code": "usd" }],
+        "inventory_quantity": 150
+      },
+      {
+        "title": "4 Piece",
+        "prices": [{ "amount": 999, "currency_code": "usd" }],
+        "inventory_quantity": 150
+      }
+    ]
+  },
+  {
+    "title": "Fish Tacos",
+    "handle": "fish-tacos-casa-mexicana",
+    "description": "Beer-battered cod, chipotle crema, shredded cabbage, pico de gallo on corn tortillas",
+    "collection_handle": "casa-mexicana",
+    "variants": [
+      {
+        "title": "2 Tacos",
+        "prices": [{ "amount": 1199, "currency_code": "usd" }],
+        "inventory_quantity": 100
+      },
+      {
+        "title": "3 Tacos",
+        "prices": [{ "amount": 1599, "currency_code": "usd" }],
+        "inventory_quantity": 100
+      }
+    ]
+  },
+  {
+    "title": "Burrito Bowl",
+    "handle": "burrito-bowl-casa-mexicana",
+    "description": "Cilantro-lime rice, black beans, your choice of protein, pico, corn salsa, sour cream, guacamole",
+    "collection_handle": "casa-mexicana",
+    "variants": [
+      {
+        "title": "Chicken",
+        "prices": [{ "amount": 1299, "currency_code": "usd" }],
+        "inventory_quantity": 100
+      },
+      {
+        "title": "Steak",
+        "prices": [{ "amount": 1499, "currency_code": "usd" }],
+        "inventory_quantity": 100
+      },
+      {
+        "title": "Carnitas",
+        "prices": [{ "amount": 1399, "currency_code": "usd" }],
+        "inventory_quantity": 100
+      }
+    ]
+  },
+  {
+    "title": "Chips & Guacamole",
+    "handle": "chips-and-guac-casa-mexicana",
+    "description": "Fresh-made tortilla chips with house guacamole prepared daily",
+    "collection_handle": "casa-mexicana",
+    "variants": [
+      {
+        "title": "Regular",
+        "prices": [{ "amount": 799, "currency_code": "usd" }],
+        "inventory_quantity": 150
+      },
+      {
+        "title": "Large",
+        "prices": [{ "amount": 1199, "currency_code": "usd" }],
+        "inventory_quantity": 150
+      }
+    ]
+  },
+  {
+    "title": "Churros",
+    "handle": "churros-casa-mexicana",
+    "description": "Cinnamon-sugar dusted churros with chocolate dipping sauce and cajeta",
+    "collection_handle": "casa-mexicana",
+    "variants": [
+      {
+        "title": "3 Piece",
+        "prices": [{ "amount": 699, "currency_code": "usd" }],
+        "inventory_quantity": 100
+      },
+      {
+        "title": "6 Piece",
+        "prices": [{ "amount": 1099, "currency_code": "usd" }],
+        "inventory_quantity": 100
+      }
+    ]
+  },
+  {
+    "title": "Big Mac Meal",
+    "handle": "big-mac-meal-golden-arches",
+    "description": "Two all-beef patties, special sauce, lettuce, cheese, pickles, onions on a sesame seed bun with fries and drink",
+    "collection_handle": "golden-arches",
+    "variants": [
+      {
+        "title": "Regular",
+        "prices": [{ "amount": 1099, "currency_code": "usd" }],
+        "inventory_quantity": 200
+      },
+      {
+        "title": "Large",
+        "prices": [{ "amount": 1299, "currency_code": "usd" }],
+        "inventory_quantity": 200
+      }
+    ]
+  },
+  {
+    "title": "Chicken McNuggets",
+    "handle": "chicken-mcnuggets-golden-arches",
+    "description": "Crispy breaded chicken nuggets with your choice of dipping sauce",
+    "collection_handle": "golden-arches",
+    "variants": [
+      {
+        "title": "6 Piece",
+        "prices": [{ "amount": 599, "currency_code": "usd" }],
+        "inventory_quantity": 200
+      },
+      {
+        "title": "10 Piece",
+        "prices": [{ "amount": 899, "currency_code": "usd" }],
+        "inventory_quantity": 200
+      },
+      {
+        "title": "20 Piece",
+        "prices": [{ "amount": 1499, "currency_code": "usd" }],
+        "inventory_quantity": 200
+      }
+    ]
+  },
+  {
+    "title": "French Fries",
+    "handle": "french-fries-golden-arches",
+    "description": "Golden crispy fries lightly salted",
+    "collection_handle": "golden-arches",
+    "variants": [
+      {
+        "title": "Small",
+        "prices": [{ "amount": 299, "currency_code": "usd" }],
+        "inventory_quantity": 300
+      },
+      {
+        "title": "Medium",
+        "prices": [{ "amount": 399, "currency_code": "usd" }],
+        "inventory_quantity": 300
+      },
+      {
+        "title": "Large",
+        "prices": [{ "amount": 499, "currency_code": "usd" }],
+        "inventory_quantity": 300
+      }
+    ]
+  },
+  {
+    "title": "McFlurry",
+    "handle": "mcflurry-golden-arches",
+    "description": "Creamy soft serve blended with your favorite mix-ins",
+    "collection_handle": "golden-arches",
+    "variants": [
+      {
+        "title": "Oreo",
+        "prices": [{ "amount": 599, "currency_code": "usd" }],
+        "inventory_quantity": 100
+      },
+      {
+        "title": "M&M",
+        "prices": [{ "amount": 599, "currency_code": "usd" }],
+        "inventory_quantity": 100
+      }
+    ]
+  },
+  {
+    "title": "General Tso's Chicken",
+    "handle": "general-tsos-chicken-wok-express",
+    "description": "Crispy chicken tossed in sweet and spicy sauce with steamed broccoli and white rice",
+    "collection_handle": "wok-express",
+    "variants": [
+      {
+        "title": "Regular",
+        "prices": [{ "amount": 1499, "currency_code": "usd" }],
+        "inventory_quantity": 100
+      },
+      {
+        "title": "Large",
+        "prices": [{ "amount": 1899, "currency_code": "usd" }],
+        "inventory_quantity": 100
+      }
+    ]
+  },
+  {
+    "title": "Kung Pao Shrimp",
+    "handle": "kung-pao-shrimp-wok-express",
+    "description": "Wok-fired shrimp with peanuts, dried chilies, bell peppers in savory kung pao sauce",
+    "collection_handle": "wok-express",
+    "variants": [
+      {
+        "title": "Regular",
+        "prices": [{ "amount": 1699, "currency_code": "usd" }],
+        "inventory_quantity": 100
+      }
+    ]
+  },
+  {
+    "title": "Fried Rice",
+    "handle": "fried-rice-wok-express",
+    "description": "Wok-tossed jasmine rice with egg, scallions, peas, and soy sauce",
+    "collection_handle": "wok-express",
+    "variants": [
+      {
+        "title": "Vegetable",
+        "prices": [{ "amount": 999, "currency_code": "usd" }],
+        "inventory_quantity": 150
+      },
+      {
+        "title": "Chicken",
+        "prices": [{ "amount": 1199, "currency_code": "usd" }],
+        "inventory_quantity": 150
+      },
+      {
+        "title": "Shrimp",
+        "prices": [{ "amount": 1399, "currency_code": "usd" }],
+        "inventory_quantity": 150
+      }
+    ]
+  },
+  {
+    "title": "Egg Rolls",
+    "handle": "egg-rolls-wok-express",
+    "description": "Crispy fried rolls filled with pork, cabbage, and carrots, served with sweet and sour sauce",
+    "collection_handle": "wok-express",
+    "variants": [
+      {
+        "title": "2 Piece",
+        "prices": [{ "amount": 599, "currency_code": "usd" }],
+        "inventory_quantity": 200
+      },
+      {
+        "title": "4 Piece",
+        "prices": [{ "amount": 999, "currency_code": "usd" }],
+        "inventory_quantity": 200
+      }
+    ]
+  }
+]
