@@ -241,7 +241,6 @@ function mockApplyPromotion({ cart_id, promo_code }) {
     if (promo.maxDiscount) discount = Math.min(discount, promo.maxDiscount);
   }
   if (promo.freeDelivery) {
-    discount += cart.delivery_fee;
     cart.delivery_fee = 0;
   }
 
