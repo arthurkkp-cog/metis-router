@@ -274,8 +274,8 @@ async function distanceMatrix(origins, destinations) {
 
   const matrix = data.durations.map((row, ri) =>
     row.map((dur, ci) => ({
-      distance_miles: data.distances ? metersToMiles(data.distances[ri][ci]) : null,
-      duration_minutes: secondsToMinutes(dur),
+      distance_miles: data.distances ? (data.distances[ri][ci] != null ? metersToMiles(data.distances[ri][ci]) : null) : null,
+      duration_minutes: dur != null ? secondsToMinutes(dur) : null,
     }))
   );
 
