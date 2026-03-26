@@ -226,11 +226,20 @@ async function optimizeMultiStop(stops) {
 
   const trip = data.trips[0];
   const waypoints = data.waypoints || [];
-  const optimizedOrder = waypoints.map((wp) => wp.waypoint_index);
+
+  // waypoints[i].waypoint_index = trip position for input stop i
+  // Build inverse: tripPositionToInput[pos] = input index
+  const tripPositionToInput = new Array(waypoints.length);
+  for (let i = 0; i < waypoints.length; i++) {
+    tripPositionToInput[waypoints[i].waypoint_index] = i;
+  }
+
+  // optimized_order: visit order as input indices (e.g. [2,0,1] = visit input stop 2 first)
+  const optimizedOrder = Array.from(tripPositionToInput);
 
   const legs = (trip.legs || []).map((leg, i) => {
-    const fromIdx = optimizedOrder[i];
-    const toIdx = i + 1 < optimizedOrder.length ? optimizedOrder[i + 1] : undefined;
+    const fromIdx = tripPositionToInput[i];
+    const toIdx = i + 1 < tripPositionToInput.length ? tripPositionToInput[i + 1] : undefined;
     return {
       from: fromIdx != null ? (stops[fromIdx]?.label || `Stop ${fromIdx}`) : `Stop ${i}`,
       to: toIdx != null ? (stops[toIdx]?.label || `Stop ${toIdx}`) : `Stop ${i + 1}`,
