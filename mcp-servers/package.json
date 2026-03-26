@@ -1,0 +1,9 @@
+{
+  "name": "doordash-mcp-servers",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.3",
+    "node-fetch": "^3.3.2"
+  }
+}

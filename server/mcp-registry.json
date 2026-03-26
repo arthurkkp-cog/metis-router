@@ -1,22 +1,45 @@
 {
   "mcpServers": {
-    "notion": {
-      "command": "npx",
-      "args": ["-y", "mcp-remote", "https://mcp.notion.com/sse"]
-    },
-    "linear": {
-      "command": "npx",
-      "args": ["-y", "mcp-remote", "https://mcp.linear.app/sse"]
-    },
-    "hyperbrowser": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "hyperbrowser-mcp"
-      ],
+    "doordash-search": {
+      "command": "node",
+      "args": ["../mcp-servers/meilisearch-mcp.mjs"],
       "env": {
-        "HYPERBROWSER_API_KEY": "API_KEY_HERE"
+        "MOCK_MODE": "true",
+        "MEILISEARCH_URL": "http://localhost:7700",
+        "MEILISEARCH_MASTER_KEY": "demo-master-key"
+      }
+    },
+    "doordash-orders": {
+      "command": "node",
+      "args": ["../mcp-servers/medusa-mcp.mjs"],
+      "env": {
+        "MOCK_MODE": "true",
+        "MEDUSA_URL": "http://localhost:9000"
+      }
+    },
+    "doordash-routing": {
+      "command": "node",
+      "args": ["../mcp-servers/osrm-mcp.mjs"],
+      "env": {
+        "MOCK_MODE": "true",
+        "OSRM_URL": "http://localhost:5000"
+      }
+    },
+    "doordash-support": {
+      "command": "node",
+      "args": ["../mcp-servers/chatwoot-mcp.mjs"],
+      "env": {
+        "MOCK_MODE": "true",
+        "CHATWOOT_URL": "http://localhost:3001"
+      }
+    },
+    "doordash-notifications": {
+      "command": "node",
+      "args": ["../mcp-servers/novu-mcp.mjs"],
+      "env": {
+        "MOCK_MODE": "true",
+        "NOVU_URL": "http://localhost:4000"
       }
     }
   }
-} 
+}  
