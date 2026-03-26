@@ -227,8 +227,9 @@ function mockGetActivePromotions(category, limit) {
   if (category) {
     results = results.filter((p) => p.category === category);
   }
+  const totalCount = results.length;
   results = results.slice(0, limit);
-  return { promotions: results, total_count: results.length };
+  return { promotions: results, total_count: totalCount };
 }
 
 function mockValidatePromoCode(promoCode, orderTotal, restaurantId) {
