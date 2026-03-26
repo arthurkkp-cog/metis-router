@@ -121,7 +121,7 @@ const MOCK_CUSTOMERS = {
     customer_id: "cust_98765",
     points_balance: 2450,
     tier: "gold",
-    points_to_next_tier: 550,
+    points_to_next_tier: 1280,
     lifetime_points: 8720,
     recent_transactions: [
       {
