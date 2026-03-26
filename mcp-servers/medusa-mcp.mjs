@@ -261,8 +261,10 @@ function mockManageCart({ action, cart_id, item }) {
   let cart;
   if (cart_id && mockCarts.has(cart_id)) {
     cart = mockCarts.get(cart_id);
-  } else if (!cart_id || !mockCarts.has(cart_id)) {
-    const newId = cart_id || generateCartId();
+  } else if (cart_id && !mockCarts.has(cart_id)) {
+    return { error: true, message: `Cart ${cart_id} not found` };
+  } else {
+    const newId = generateCartId();
     cart = {
       cart_id: newId,
       items: [],
@@ -352,6 +354,8 @@ async function liveCreateOrder({ restaurant_id, items, delivery_address, custome
           quantity: item.quantity,
         }),
       });
+    } else {
+      throw new Error(`Item '${item.name}' is missing a variant_id, which is required for live orders`);
     }
   }
 
