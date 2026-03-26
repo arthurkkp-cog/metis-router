@@ -455,6 +455,8 @@ async function liveManageCart({ action, cart_id, item }) {
       method: "POST",
       body: JSON.stringify({ variant_id: item.variant_id, quantity: item.quantity }),
     });
+  } else if (action === "add" && !item.variant_id) {
+    throw new Error(`Item '${item.name}' is missing a variant_id, which is required for live cart operations`);
   } else if (action === "remove") {
     // Need to find line item by variant, then delete
     const { cart } = await medusaFetch(`/store/carts/${cartId}`);
@@ -471,6 +473,8 @@ async function liveManageCart({ action, cart_id, item }) {
         body: JSON.stringify({ quantity: item.quantity }),
       });
     }
+  } else if (action === "update" && !item.variant_id) {
+    throw new Error(`Item '${item.name}' is missing a variant_id, which is required for live cart updates`);
   }
 
   const { cart } = await medusaFetch(`/store/carts/${cartId}`);
