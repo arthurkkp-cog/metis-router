@@ -1,0 +1,250 @@
+# =============================================================================
+# DoorDash Demo — Docker Compose
+# =============================================================================
+# Starts all backing services that simulate DoorDash's microservice stack.
+#
+# Usage:
+#   docker compose -f docker-compose.demo.yml --env-file .env.demo up -d
+#
+# Services:
+#   1. Meilisearch  — Restaurant & Menu Search     (port 7700)
+#   2. Medusa       — Order & Commerce              (port 9000)
+#   3. OSRM         — Delivery Routing & ETA        (port 5000)
+#   4. Chatwoot     — Customer Support              (port 3001)
+#   5. Novu Mock    — Notifications                 (port 4000)
+# =============================================================================
+
+services:
+  # ===========================================================================
+  # 1. MEILISEARCH — Restaurant & Menu Search
+  # ===========================================================================
+  meilisearch:
+    image: getmeili/meilisearch:latest
+    container_name: demo-meilisearch
+    ports:
+      - "7700:7700"
+    environment:
+      - MEILI_MASTER_KEY=${MEILI_MASTER_KEY:-demo-master-key}
+      - MEILI_ENV=${MEILI_ENV:-development}
+    volumes:
+      - meilisearch-data:/meili_data
+    networks:
+      - demo-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:7700/health"]
+      interval: 15s
+      timeout: 5s
+      start_period: 10s
+      retries: 5
+
+  # ===========================================================================
+  # 2. MEDUSA — Order & Commerce
+  # ===========================================================================
+  medusa-db:
+    image: postgres:15-alpine
+    container_name: demo-medusa-db
+    ports:
+      - "5433:5432"
+    environment:
+      - POSTGRES_USER=${MEDUSA_POSTGRES_USER:-postgres}
+      - POSTGRES_PASSWORD=${MEDUSA_POSTGRES_PASSWORD:-postgres}
+      - POSTGRES_DB=${MEDUSA_POSTGRES_DB:-medusa}
+    volumes:
+      - medusa-db-data:/var/lib/postgresql/data
+    networks:
+      - demo-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      start_period: 10s
+      retries: 5
+
+  medusa:
+    image: medusajs/medusa:latest
+    container_name: demo-medusa
+    ports:
+      - "9000:9000"
+    environment:
+      - DATABASE_URL=${MEDUSA_DATABASE_URL:-postgres://postgres:postgres@medusa-db:5432/medusa}
+      - MEDUSA_ADMIN_CORS=${MEDUSA_ADMIN_CORS:-http://localhost:3000}
+      - STORE_CORS=${MEDUSA_STORE_CORS:-http://localhost:3000}
+      - NODE_ENV=development
+    networks:
+      - demo-network
+    restart: unless-stopped
+    depends_on:
+      medusa-db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/health"]
+      interval: 15s
+      timeout: 5s
+      start_period: 30s
+      retries: 5
+
+  # ===========================================================================
+  # 3. OSRM — Delivery Routing & ETA
+  # ===========================================================================
+  # NOTE: OSRM requires pre-processed map data. Run scripts/download-osrm-data.sh
+  # before starting this service. The processed data should be in ./osrm-data/.
+  osrm:
+    image: osrm/osrm-backend:latest
+    container_name: demo-osrm
+    ports:
+      - "5000:5000"
+    command: osrm-routed --algorithm mld /data/california-latest.osrm
+    volumes:
+      - ./osrm-data:/data
+    networks:
+      - demo-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/route/v1/driving/-122.4194,37.7749;-122.4094,37.7849"]
+      interval: 15s
+      timeout: 10s
+      start_period: 15s
+      retries: 5
+
+  # ===========================================================================
+  # 4. CHATWOOT — Customer Support
+  # ===========================================================================
+  chatwoot-db:
+    image: postgres:15-alpine
+    container_name: demo-chatwoot-db
+    environment:
+      - POSTGRES_USER=${CHATWOOT_POSTGRES_USER:-postgres}
+      - POSTGRES_PASSWORD=${CHATWOOT_POSTGRES_PASSWORD:-postgres}
+      - POSTGRES_DB=${CHATWOOT_POSTGRES_DB:-chatwoot}
+    volumes:
+      - chatwoot-db-data:/var/lib/postgresql/data
+    networks:
+      - demo-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      start_period: 10s
+      retries: 5
+
+  chatwoot-redis:
+    image: redis:7-alpine
+    container_name: demo-chatwoot-redis
+    networks:
+      - demo-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      start_period: 5s
+      retries: 5
+
+  chatwoot:
+    image: chatwoot/chatwoot:latest
+    container_name: demo-chatwoot
+    ports:
+      - "3001:3000"
+    environment:
+      - SECRET_KEY_BASE=${CHATWOOT_SECRET_KEY_BASE:-demo-secret-key-base-that-is-long-enough-for-chatwoot-to-accept-it-properly}
+      - FRONTEND_URL=${CHATWOOT_FRONTEND_URL:-http://localhost:3001}
+      - RAILS_ENV=${CHATWOOT_RAILS_ENV:-development}
+      - REDIS_URL=redis://chatwoot-redis:6379
+      - POSTGRES_HOST=chatwoot-db
+      - POSTGRES_USERNAME=${CHATWOOT_POSTGRES_USER:-postgres}
+      - POSTGRES_PASSWORD=${CHATWOOT_POSTGRES_PASSWORD:-postgres}
+      - POSTGRES_DATABASE=${CHATWOOT_POSTGRES_DB:-chatwoot}
+    command: bundle exec rails s -p 3000 -b 0.0.0.0
+    networks:
+      - demo-network
+    restart: unless-stopped
+    depends_on:
+      chatwoot-db:
+        condition: service_healthy
+      chatwoot-redis:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000"]
+      interval: 15s
+      timeout: 10s
+      start_period: 60s
+      retries: 5
+
+  # ===========================================================================
+  # 5. NOVU MOCK — Notifications
+  # ===========================================================================
+  novu-mongodb:
+    image: mongo:7
+    container_name: demo-novu-mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - novu-mongodb-data:/data/db
+    networks:
+      - demo-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 10s
+      timeout: 5s
+      start_period: 10s
+      retries: 5
+
+  novu-redis:
+    image: redis:7-alpine
+    container_name: demo-novu-redis
+    networks:
+      - demo-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      start_period: 5s
+      retries: 5
+
+  novu-mock:
+    build:
+      context: ./demo-services/novu-mock
+      dockerfile: Dockerfile
+    container_name: demo-novu-mock
+    ports:
+      - "4000:4000"
+    environment:
+      - NOVU_MOCK_PORT=${NOVU_MOCK_PORT:-4000}
+      - MONGO_URL=mongodb://novu-mongodb:27017/novu
+      - REDIS_URL=redis://novu-redis:6379
+    networks:
+      - demo-network
+    restart: unless-stopped
+    depends_on:
+      novu-mongodb:
+        condition: service_healthy
+      novu-redis:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:4000/health"]
+      interval: 10s
+      timeout: 5s
+      start_period: 10s
+      retries: 5
+
+# =============================================================================
+# Networks
+# =============================================================================
+networks:
+  demo-network:
+    driver: bridge
+    name: demo-network
+
+# =============================================================================
+# Volumes
+# =============================================================================
+volumes:
+  meilisearch-data:
+  medusa-db-data:
+  chatwoot-db-data:
+  novu-mongodb-data:
