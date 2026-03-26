@@ -1,0 +1,167 @@
+[
+  {
+    "query": "Find me Thai food nearby",
+    "expected_service": "meilisearch",
+    "expected_tools": ["search_restaurants"],
+    "category": "restaurant_search"
+  },
+  {
+    "query": "What sushi places are open right now?",
+    "expected_service": "meilisearch",
+    "expected_tools": ["search_restaurants"],
+    "category": "restaurant_search"
+  },
+  {
+    "query": "i want pizzza",
+    "expected_service": "meilisearch",
+    "expected_tools": ["search_restaurants"],
+    "category": "restaurant_search"
+  },
+  {
+    "query": "Show me vegan restaurants in downtown",
+    "expected_service": "meilisearch",
+    "expected_tools": ["search_restaurants"],
+    "category": "restaurant_search"
+  },
+  {
+    "query": "Any good burger joints around here?",
+    "expected_service": "meilisearch",
+    "expected_tools": ["search_restaurants"],
+    "category": "restaurant_search"
+  },
+  {
+    "query": "Place an order for Pad Thai from Bangkok Kitchen",
+    "expected_service": "medusa",
+    "expected_tools": ["create_order"],
+    "category": "order_management"
+  },
+  {
+    "query": "Cancel my order #123",
+    "expected_service": "medusa",
+    "expected_tools": ["cancel_order"],
+    "category": "order_management"
+  },
+  {
+    "query": "I want to add extra sauce to my current order",
+    "expected_service": "medusa",
+    "expected_tools": ["modify_order"],
+    "category": "order_management"
+  },
+  {
+    "query": "What's the status of my last order?",
+    "expected_service": "medusa",
+    "expected_tools": ["get_order_status"],
+    "category": "order_management"
+  },
+  {
+    "query": "Reorder my usual from Chipotle",
+    "expected_service": "medusa",
+    "expected_tools": ["create_order"],
+    "category": "order_management"
+  },
+  {
+    "query": "Where is my dasher?",
+    "expected_service": "osrm",
+    "expected_tools": ["track_delivery"],
+    "category": "delivery_tracking"
+  },
+  {
+    "query": "How long until my delivery arrives?",
+    "expected_service": "osrm",
+    "expected_tools": ["get_eta"],
+    "category": "delivery_tracking"
+  },
+  {
+    "query": "Can you show me the driver's route on a map?",
+    "expected_service": "osrm",
+    "expected_tools": ["get_route"],
+    "category": "delivery_tracking"
+  },
+  {
+    "query": "What's the ETA for order #789?",
+    "expected_service": "osrm",
+    "expected_tools": ["get_eta"],
+    "category": "delivery_tracking"
+  },
+  {
+    "query": "Is my dasher on the way yet?",
+    "expected_service": "osrm",
+    "expected_tools": ["track_delivery"],
+    "category": "delivery_tracking"
+  },
+  {
+    "query": "My food arrived cold and the container was damaged",
+    "expected_service": "chatwoot",
+    "expected_tools": ["create_ticket"],
+    "category": "customer_support"
+  },
+  {
+    "query": "I need a refund for my last order",
+    "expected_service": "chatwoot",
+    "expected_tools": ["request_refund"],
+    "category": "customer_support"
+  },
+  {
+    "query": "The restaurant sent me the wrong items",
+    "expected_service": "chatwoot",
+    "expected_tools": ["create_ticket"],
+    "category": "customer_support"
+  },
+  {
+    "query": "I've been waiting over an hour, this is terrible service",
+    "expected_service": "chatwoot",
+    "expected_tools": ["create_ticket"],
+    "category": "customer_support"
+  },
+  {
+    "query": "Can I speak to a manager about my experience?",
+    "expected_service": "chatwoot",
+    "expected_tools": ["escalate_ticket"],
+    "category": "customer_support"
+  },
+  {
+    "query": "Notify me when my order is delivered",
+    "expected_service": "novu",
+    "expected_tools": ["create_notification"],
+    "category": "notifications"
+  },
+  {
+    "query": "Send me order updates via email",
+    "expected_service": "novu",
+    "expected_tools": ["configure_notification"],
+    "category": "notifications"
+  },
+  {
+    "query": "I want push notifications for delivery status",
+    "expected_service": "novu",
+    "expected_tools": ["configure_notification"],
+    "category": "notifications"
+  },
+  {
+    "query": "Text me when the dasher is nearby",
+    "expected_service": "novu",
+    "expected_tools": ["create_notification"],
+    "category": "notifications"
+  },
+  {
+    "query": "Unsubscribe me from promotional alerts",
+    "expected_service": "novu",
+    "expected_tools": ["update_preferences"],
+    "category": "notifications"
+  },
+  {
+    "query": "Cancel my order and send me a confirmation email",
+    "expected_service": ["medusa", "novu"],
+    "category": "cross_domain"
+  },
+  {
+    "query": "My food never arrived, I want a refund and notify me when it's processed",
+    "expected_service": ["chatwoot", "novu"],
+    "category": "cross_domain"
+  },
+  {
+    "query": "Search for pizza places and place an order from the top result",
+    "expected_service": ["meilisearch", "medusa"],
+    "category": "cross_domain"
+  }
+]
