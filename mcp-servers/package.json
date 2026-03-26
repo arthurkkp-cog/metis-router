@@ -1,0 +1,11 @@
+{
+  "name": "novu-mcp-server",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Novu notification MCP server for DoorDash-themed demo",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.3",
+    "zod": "^3.22.4"
+  }
+}
