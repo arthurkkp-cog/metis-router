@@ -50,38 +50,6 @@ def setup_tracing(project_name: str = "doordash-mcp-eval") -> None:
 # DSPy Signatures
 # ---------------------------------------------------------------------------
 
-SERVICES_DESCRIPTION = """
-You are a DoorDash customer-support routing agent. Your job is to classify
-each customer query to exactly ONE primary MCP service.
-
-Available services:
-  meilisearch - Restaurant and food search. Use for queries about finding
-                restaurants, browsing menus, searching for cuisine types,
-                or discovering what's available nearby.
-  medusa      - Order management. Use for placing orders, cancelling orders,
-                modifying orders, checking order status, or anything related
-                to the lifecycle of a purchase.
-  osrm        - Delivery tracking and routing. Use for real-time delivery
-                location, ETA estimates, driver/dasher tracking, route info,
-                or distance calculations.
-  chatwoot    - Customer support and complaints. Use for refund requests,
-                complaints about food quality, missing items, reporting
-                issues, or any conversation that requires human-like support
-                resolution.
-  novu        - Notifications. Use for sending delivery updates, order
-                confirmations, promotional alerts, push notifications, email
-                or SMS notifications to customers.
-
-Routing rules:
-- Food / restaurant discovery queries -> meilisearch
-- Order lifecycle (create, cancel, modify, status) -> medusa
-- "Where is my driver/dasher?", ETA, tracking -> osrm
-- Complaints, refunds, quality issues -> chatwoot
-- "Notify me", "send me updates", alerts -> novu
-- If ambiguous, prefer the service that best matches the primary intent.
-"""
-
-
 class RouteQuery(dspy.Signature):
     """Classify a customer support query to the correct MCP service.
 
