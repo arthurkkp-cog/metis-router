@@ -88,7 +88,8 @@ const ORDER_TEMPLATES = {
 function renderTemplate(template, vars) {
   let text = template;
   for (const [key, value] of Object.entries(vars)) {
-    text = text.replace(new RegExp(`#\\{${key}\\}`, "g"), value);
+    const escapedKey = key.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    text = text.replace(new RegExp(`#\\{${escapedKey}\\}`, "g"), String(value));
   }
   return text;
 }
@@ -306,7 +307,7 @@ async function liveSendPromotional({ subscriber_id, title, message, promo_code, 
 }
 
 async function liveGetNotificationStatus({ notification_id }) {
-  const result = await novuFetch(`/v1/notifications?page=0&transactionId=${notification_id}`);
+  const result = await novuFetch(`/v1/notifications?page=0&transactionId=${encodeURIComponent(notification_id)}`);
   const items = result.data || [];
 
   if (items.length === 0) {
@@ -324,11 +325,11 @@ async function liveGetNotificationStatus({ notification_id }) {
 
 async function liveManageSubscriberPreferences({ action, subscriber_id, preferences }) {
   if (action === "get") {
-    const result = await novuFetch(`/v1/subscribers/${subscriber_id}/preferences`);
+    const result = await novuFetch(`/v1/subscribers/${encodeURIComponent(subscriber_id)}/preferences`);
     return { subscriber_id, preferences: result.data || {} };
   }
 
-  const result = await novuFetch(`/v1/subscribers/${subscriber_id}/preferences`, {
+  const result = await novuFetch(`/v1/subscribers/${encodeURIComponent(subscriber_id)}/preferences`, {
     method: "PUT",
     body: JSON.stringify(preferences),
   });
