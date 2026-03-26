@@ -256,18 +256,25 @@ function mockValidatePromoCode(promoCode, orderTotal, restaurantId) {
   }
 
   // Check restaurant eligibility
-  if (
-    promo.applicable_restaurants.length > 0 &&
-    restaurantId &&
-    !promo.applicable_restaurants.includes(restaurantId)
-  ) {
-    return {
-      valid: false,
-      discount_amount: 0,
-      new_total: orderTotal,
-      promo_details: null,
-      reason_if_invalid: `This promo code is only valid at specific restaurants. The selected restaurant is not eligible.`,
-    };
+  if (promo.applicable_restaurants.length > 0) {
+    if (!restaurantId) {
+      return {
+        valid: false,
+        discount_amount: 0,
+        new_total: orderTotal,
+        promo_details: null,
+        reason_if_invalid: `This promo code is only valid at specific restaurants. Please provide a restaurant_id to verify eligibility.`,
+      };
+    }
+    if (!promo.applicable_restaurants.includes(restaurantId)) {
+      return {
+        valid: false,
+        discount_amount: 0,
+        new_total: orderTotal,
+        promo_details: null,
+        reason_if_invalid: `This promo code is only valid at specific restaurants. The selected restaurant is not eligible.`,
+      };
+    }
   }
 
   // Calculate discount
