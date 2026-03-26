@@ -89,7 +89,7 @@ function renderTemplate(template, vars) {
   let text = template;
   for (const [key, value] of Object.entries(vars)) {
     const escapedKey = key.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-    text = text.replace(new RegExp(`#\\{${escapedKey}\\}`, "g"), String(value));
+    text = text.replace(new RegExp(`#\\{${escapedKey}\\}`, "g"), () => String(value));
   }
   return text;
 }
