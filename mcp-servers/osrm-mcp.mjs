@@ -228,12 +228,16 @@ async function optimizeMultiStop(stops) {
   const waypoints = data.waypoints || [];
   const optimizedOrder = waypoints.map((wp) => wp.waypoint_index);
 
-  const legs = (trip.legs || []).map((leg, i) => ({
-    from: stops[optimizedOrder[i]]?.label || `Stop ${optimizedOrder[i]}`,
-    to: stops[optimizedOrder[i + 1]]?.label || `Stop ${optimizedOrder[i + 1]}`,
-    distance_miles: metersToMiles(leg.distance),
-    duration_minutes: secondsToMinutes(leg.duration),
-  }));
+  const legs = (trip.legs || []).map((leg, i) => {
+    const fromIdx = optimizedOrder[i];
+    const toIdx = i + 1 < optimizedOrder.length ? optimizedOrder[i + 1] : undefined;
+    return {
+      from: fromIdx != null ? (stops[fromIdx]?.label || `Stop ${fromIdx}`) : `Stop ${i}`,
+      to: toIdx != null ? (stops[toIdx]?.label || `Stop ${toIdx}`) : `Stop ${i + 1}`,
+      distance_miles: metersToMiles(leg.distance),
+      duration_minutes: secondsToMinutes(leg.duration),
+    };
+  });
 
   return {
     optimized_order: optimizedOrder,
@@ -252,7 +256,7 @@ async function distanceMatrix(origins, destinations) {
   const sourceIndices = origins.map((_, i) => i).join(";");
   const destIndices = destinations.map((_, i) => i + origins.length).join(";");
 
-  const path = `/table/v1/driving/${coordStr}?sources=${sourceIndices}&destinations=${destIndices}`;
+  const path = `/table/v1/driving/${coordStr}?sources=${sourceIndices}&destinations=${destIndices}&annotations=distance,duration`;
   const data = await osrmFetch(path);
 
   if (!data.durations) {
