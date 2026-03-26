@@ -44,6 +44,14 @@ const TEAM_MAP = {
   general: "General Support",
 };
 
+// Chatwoot team IDs – override via CHATWOOT_TEAM_ID_<KEY> env vars
+const TEAM_ID_MAP = {
+  order_issues: Number(process.env.CHATWOOT_TEAM_ID_ORDER_ISSUES) || 1,
+  refund_specialists: Number(process.env.CHATWOOT_TEAM_ID_REFUND_SPECIALISTS) || 2,
+  dasher_support: Number(process.env.CHATWOOT_TEAM_ID_DASHER_SUPPORT) || 3,
+  general: Number(process.env.CHATWOOT_TEAM_ID_GENERAL) || 4,
+};
+
 const HELP_ARTICLES = [
   {
     title: "How to request a refund for a missing item",
@@ -403,6 +411,9 @@ async function liveAssignAgent({ ticket_id, team, agent_id }) {
   const payload = {};
   if (agent_id) {
     payload.assignee_id = agent_id;
+  }
+  if (team) {
+    payload.team_id = TEAM_ID_MAP[team] || TEAM_ID_MAP.general;
   }
 
   await chatwootRequest(`/conversations/${ticket_id}/assignments`, {
