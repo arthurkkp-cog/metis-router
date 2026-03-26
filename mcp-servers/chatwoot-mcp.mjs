@@ -336,6 +336,7 @@ async function liveCreateSupportTicket({
   const conversationPayload = {
     contact_id: contactId,
     message: description,
+    team_id: TEAM_ID_MAP[team] || TEAM_ID_MAP.general,
     additional_attributes: additionalAttributes,
     custom_attributes: additionalAttributes,
   };
