@@ -1,0 +1,3140 @@
+[
+  {
+    "id": "ITEM-001",
+    "name": "Dragon Roll",
+    "description": "Tempura shrimp, avocado, cucumber topped with eel and spicy mayo",
+    "price": 16.99,
+    "restaurant_id": "REST-001",
+    "restaurant_name": "Sakura Sushi",
+    "category": "Specialty Rolls",
+    "dietary_tags": [
+      "contains-shellfish"
+    ],
+    "is_popular": true,
+    "calories": 450,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-002",
+    "name": "Salmon Nigiri (4pc)",
+    "description": "Fresh Atlantic salmon over seasoned sushi rice",
+    "price": 12.99,
+    "restaurant_id": "REST-001",
+    "restaurant_name": "Sakura Sushi",
+    "category": "Nigiri",
+    "dietary_tags": [
+      "gluten-free"
+    ],
+    "is_popular": true,
+    "calories": 280,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-003",
+    "name": "Spicy Tuna Roll",
+    "description": "Fresh tuna with spicy mayo, cucumber, and sesame seeds",
+    "price": 14.99,
+    "restaurant_id": "REST-001",
+    "restaurant_name": "Sakura Sushi",
+    "category": "Specialty Rolls",
+    "dietary_tags": [
+      "spicy"
+    ],
+    "is_popular": true,
+    "calories": 380,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-004",
+    "name": "Miso Soup",
+    "description": "Traditional soybean soup with tofu, wakame, and green onion",
+    "price": 4.99,
+    "restaurant_id": "REST-001",
+    "restaurant_name": "Sakura Sushi",
+    "category": "Soups",
+    "dietary_tags": [
+      "vegetarian",
+      "gluten-free"
+    ],
+    "is_popular": false,
+    "calories": 85,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-005",
+    "name": "Har Gow (Shrimp Dumplings)",
+    "description": "Translucent steamed dumplings filled with whole shrimp",
+    "price": 7.99,
+    "restaurant_id": "REST-002",
+    "restaurant_name": "Golden Dragon Palace",
+    "category": "Dim Sum",
+    "dietary_tags": [
+      "contains-shellfish"
+    ],
+    "is_popular": true,
+    "calories": 220,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-006",
+    "name": "Siu Mai",
+    "description": "Open-topped pork and shrimp dumplings with fish roe",
+    "price": 6.99,
+    "restaurant_id": "REST-002",
+    "restaurant_name": "Golden Dragon Palace",
+    "category": "Dim Sum",
+    "dietary_tags": [
+      "contains-shellfish"
+    ],
+    "is_popular": true,
+    "calories": 260,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-007",
+    "name": "Kung Pao Chicken",
+    "description": "Wok-fired chicken with peanuts, dried chilies, and Szechuan peppercorns",
+    "price": 15.99,
+    "restaurant_id": "REST-002",
+    "restaurant_name": "Golden Dragon Palace",
+    "category": "Entrees",
+    "dietary_tags": [
+      "spicy",
+      "contains-nuts"
+    ],
+    "is_popular": true,
+    "calories": 520,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-008",
+    "name": "Char Siu Bao",
+    "description": "Fluffy steamed buns filled with BBQ pork",
+    "price": 5.99,
+    "restaurant_id": "REST-002",
+    "restaurant_name": "Golden Dragon Palace",
+    "category": "Dim Sum",
+    "dietary_tags": [],
+    "is_popular": false,
+    "calories": 190,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-009",
+    "name": "Margherita Pizza",
+    "description": "San Marzano tomatoes, fresh mozzarella, basil, and extra virgin olive oil",
+    "price": 18.99,
+    "restaurant_id": "REST-003",
+    "restaurant_name": "Bella Trattoria",
+    "category": "Pizza",
+    "dietary_tags": [
+      "vegetarian"
+    ],
+    "is_popular": true,
+    "calories": 680,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-010",
+    "name": "Fettuccine Alfredo",
+    "description": "Handmade fettuccine in creamy Parmigiano-Reggiano sauce",
+    "price": 19.99,
+    "restaurant_id": "REST-003",
+    "restaurant_name": "Bella Trattoria",
+    "category": "Pasta",
+    "dietary_tags": [
+      "vegetarian"
+    ],
+    "is_popular": true,
+    "calories": 750,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-011",
+    "name": "Bruschetta al Pomodoro",
+    "description": "Toasted ciabatta with fresh tomatoes, garlic, basil, and balsamic glaze",
+    "price": 11.99,
+    "restaurant_id": "REST-003",
+    "restaurant_name": "Bella Trattoria",
+    "category": "Antipasti",
+    "dietary_tags": [
+      "vegetarian",
+      "vegan"
+    ],
+    "is_popular": false,
+    "calories": 320,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-012",
+    "name": "Tiramisu",
+    "description": "Classic Italian dessert with mascarpone, espresso-soaked ladyfingers, and cocoa",
+    "price": 10.99,
+    "restaurant_id": "REST-003",
+    "restaurant_name": "Bella Trattoria",
+    "category": "Desserts",
+    "dietary_tags": [
+      "vegetarian"
+    ],
+    "is_popular": true,
+    "calories": 420,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-013",
+    "name": "Carne Asada Burrito",
+    "description": "Grilled steak, rice, beans, pico de gallo, sour cream, and guacamole",
+    "price": 13.99,
+    "restaurant_id": "REST-004",
+    "restaurant_name": "Taqueria El Sol",
+    "category": "Burritos",
+    "dietary_tags": [],
+    "is_popular": true,
+    "calories": 890,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-014",
+    "name": "Al Pastor Tacos (3)",
+    "description": "Marinated pork with pineapple, onion, and cilantro on corn tortillas",
+    "price": 11.99,
+    "restaurant_id": "REST-004",
+    "restaurant_name": "Taqueria El Sol",
+    "category": "Tacos",
+    "dietary_tags": [
+      "gluten-free"
+    ],
+    "is_popular": true,
+    "calories": 480,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-015",
+    "name": "Chips & Guacamole",
+    "description": "House-made tortilla chips with fresh guacamole",
+    "price": 8.99,
+    "restaurant_id": "REST-004",
+    "restaurant_name": "Taqueria El Sol",
+    "category": "Appetizers",
+    "dietary_tags": [
+      "vegetarian",
+      "vegan",
+      "gluten-free"
+    ],
+    "is_popular": true,
+    "calories": 350,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-016",
+    "name": "Chicken Quesadilla",
+    "description": "Grilled flour tortilla with chicken, cheese, peppers, and sour cream",
+    "price": 10.99,
+    "restaurant_id": "REST-004",
+    "restaurant_name": "Taqueria El Sol",
+    "category": "Quesadillas",
+    "dietary_tags": [],
+    "is_popular": false,
+    "calories": 620,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-017",
+    "name": "Pad Thai",
+    "description": "Rice noodles with shrimp, bean sprouts, peanuts, and tamarind sauce",
+    "price": 14.99,
+    "restaurant_id": "REST-005",
+    "restaurant_name": "Thai Basil Garden",
+    "category": "Noodles",
+    "dietary_tags": [
+      "contains-shellfish",
+      "contains-nuts"
+    ],
+    "is_popular": true,
+    "calories": 520,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-018",
+    "name": "Green Curry",
+    "description": "Coconut green curry with bamboo shoots, Thai basil, and jasmine rice",
+    "price": 15.99,
+    "restaurant_id": "REST-005",
+    "restaurant_name": "Thai Basil Garden",
+    "category": "Curries",
+    "dietary_tags": [
+      "spicy",
+      "gluten-free"
+    ],
+    "is_popular": true,
+    "calories": 580,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-019",
+    "name": "Tom Yum Soup",
+    "description": "Hot and sour soup with shrimp, lemongrass, galangal, and lime leaves",
+    "price": 9.99,
+    "restaurant_id": "REST-005",
+    "restaurant_name": "Thai Basil Garden",
+    "category": "Soups",
+    "dietary_tags": [
+      "spicy",
+      "contains-shellfish",
+      "gluten-free"
+    ],
+    "is_popular": false,
+    "calories": 180,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-020",
+    "name": "Mango Sticky Rice",
+    "description": "Sweet coconut sticky rice with fresh mango slices",
+    "price": 8.99,
+    "restaurant_id": "REST-005",
+    "restaurant_name": "Thai Basil Garden",
+    "category": "Desserts",
+    "dietary_tags": [
+      "vegetarian",
+      "vegan",
+      "gluten-free"
+    ],
+    "is_popular": true,
+    "calories": 320,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-021",
+    "name": "Butter Chicken",
+    "description": "Tender chicken in creamy tomato-butter sauce with fenugreek",
+    "price": 16.99,
+    "restaurant_id": "REST-006",
+    "restaurant_name": "Mumbai Masala House",
+    "category": "Curries",
+    "dietary_tags": [
+      "gluten-free"
+    ],
+    "is_popular": true,
+    "calories": 550,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-022",
+    "name": "Garlic Naan",
+    "description": "Soft leavened bread with garlic and cilantro from our tandoor",
+    "price": 4.99,
+    "restaurant_id": "REST-006",
+    "restaurant_name": "Mumbai Masala House",
+    "category": "Breads",
+    "dietary_tags": [
+      "vegetarian"
+    ],
+    "is_popular": true,
+    "calories": 260,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-023",
+    "name": "Chicken Tikka Masala",
+    "description": "Grilled chicken in a rich, spiced tomato cream sauce",
+    "price": 17.99,
+    "restaurant_id": "REST-006",
+    "restaurant_name": "Mumbai Masala House",
+    "category": "Curries",
+    "dietary_tags": [],
+    "is_popular": true,
+    "calories": 580,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-024",
+    "name": "Vegetable Samosa (2pc)",
+    "description": "Crispy pastry filled with spiced potatoes and peas",
+    "price": 6.99,
+    "restaurant_id": "REST-006",
+    "restaurant_name": "Mumbai Masala House",
+    "category": "Appetizers",
+    "dietary_tags": [
+      "vegetarian",
+      "vegan"
+    ],
+    "is_popular": false,
+    "calories": 310,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-025",
+    "name": "Classic Cheeseburger",
+    "description": "Half-pound Angus patty with aged cheddar, lettuce, tomato, and special sauce",
+    "price": 15.99,
+    "restaurant_id": "REST-007",
+    "restaurant_name": "The American Grill",
+    "category": "Burgers",
+    "dietary_tags": [],
+    "is_popular": true,
+    "calories": 780,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-026",
+    "name": "BBQ Baby Back Ribs",
+    "description": "Slow-smoked baby back ribs with tangy BBQ sauce and coleslaw",
+    "price": 24.99,
+    "restaurant_id": "REST-007",
+    "restaurant_name": "The American Grill",
+    "category": "Entrees",
+    "dietary_tags": [
+      "gluten-free"
+    ],
+    "is_popular": true,
+    "calories": 920,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-027",
+    "name": "Loaded Fries",
+    "description": "Crispy fries with bacon, cheddar, sour cream, and green onions",
+    "price": 9.99,
+    "restaurant_id": "REST-007",
+    "restaurant_name": "The American Grill",
+    "category": "Sides",
+    "dietary_tags": [],
+    "is_popular": false,
+    "calories": 650,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-028",
+    "name": "Caesar Salad",
+    "description": "Romaine lettuce with Caesar dressing, croutons, and parmesan",
+    "price": 11.99,
+    "restaurant_id": "REST-007",
+    "restaurant_name": "The American Grill",
+    "category": "Salads",
+    "dietary_tags": [
+      "vegetarian"
+    ],
+    "is_popular": false,
+    "calories": 380,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-029",
+    "name": "Bulgogi",
+    "description": "Thinly sliced marinated beef grilled to perfection with banchan",
+    "price": 18.99,
+    "restaurant_id": "REST-008",
+    "restaurant_name": "Seoul Kitchen",
+    "category": "BBQ",
+    "dietary_tags": [
+      "gluten-free"
+    ],
+    "is_popular": true,
+    "calories": 520,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-030",
+    "name": "Bibimbap",
+    "description": "Mixed rice bowl with vegetables, beef, egg, and gochujang sauce",
+    "price": 16.99,
+    "restaurant_id": "REST-008",
+    "restaurant_name": "Seoul Kitchen",
+    "category": "Rice Bowls",
+    "dietary_tags": [
+      "spicy"
+    ],
+    "is_popular": true,
+    "calories": 620,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-031",
+    "name": "Kimchi Jjigae",
+    "description": "Spicy kimchi stew with pork belly and tofu",
+    "price": 14.99,
+    "restaurant_id": "REST-008",
+    "restaurant_name": "Seoul Kitchen",
+    "category": "Stews",
+    "dietary_tags": [
+      "spicy"
+    ],
+    "is_popular": false,
+    "calories": 380,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-032",
+    "name": "Korean Fried Chicken",
+    "description": "Double-fried crispy chicken with sweet chili glaze",
+    "price": 15.99,
+    "restaurant_id": "REST-008",
+    "restaurant_name": "Seoul Kitchen",
+    "category": "Appetizers",
+    "dietary_tags": [
+      "spicy"
+    ],
+    "is_popular": true,
+    "calories": 580,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-033",
+    "name": "Pho Bo (Beef Pho)",
+    "description": "12-hour bone broth with rice noodles, rare beef, tendon, and fresh herbs",
+    "price": 14.99,
+    "restaurant_id": "REST-009",
+    "restaurant_name": "Pho Saigon",
+    "category": "Soups",
+    "dietary_tags": [
+      "gluten-free"
+    ],
+    "is_popular": true,
+    "calories": 450,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-034",
+    "name": "Banh Mi Dac Biet",
+    "description": "Special combo banh mi with ham, pate, pork, pickled veggies, and cilantro",
+    "price": 10.99,
+    "restaurant_id": "REST-009",
+    "restaurant_name": "Pho Saigon",
+    "category": "Sandwiches",
+    "dietary_tags": [],
+    "is_popular": true,
+    "calories": 520,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-035",
+    "name": "Vermicelli Bowl",
+    "description": "Rice vermicelli with grilled pork, spring rolls, and nuoc cham dressing",
+    "price": 13.99,
+    "restaurant_id": "REST-009",
+    "restaurant_name": "Pho Saigon",
+    "category": "Bowls",
+    "dietary_tags": [
+      "gluten-free"
+    ],
+    "is_popular": false,
+    "calories": 480,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-036",
+    "name": "Summer Rolls (2pc)",
+    "description": "Fresh rice paper rolls with shrimp, herbs, vermicelli, and peanut sauce",
+    "price": 7.99,
+    "restaurant_id": "REST-009",
+    "restaurant_name": "Pho Saigon",
+    "category": "Appetizers",
+    "dietary_tags": [
+      "contains-shellfish",
+      "gluten-free"
+    ],
+    "is_popular": false,
+    "calories": 180,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-037",
+    "name": "Falafel Plate",
+    "description": "Crispy chickpea falafel with hummus, tabbouleh, pita, and tahini",
+    "price": 13.99,
+    "restaurant_id": "REST-010",
+    "restaurant_name": "Mediterranean Oasis",
+    "category": "Plates",
+    "dietary_tags": [
+      "vegetarian",
+      "vegan"
+    ],
+    "is_popular": true,
+    "calories": 520,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-038",
+    "name": "Chicken Shawarma Wrap",
+    "description": "Spiced chicken with garlic sauce, pickles, and tomato in warm pita",
+    "price": 12.99,
+    "restaurant_id": "REST-010",
+    "restaurant_name": "Mediterranean Oasis",
+    "category": "Wraps",
+    "dietary_tags": [],
+    "is_popular": true,
+    "calories": 580,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-039",
+    "name": "Hummus & Pita",
+    "description": "Creamy house-made hummus with warm pita bread and olive oil",
+    "price": 7.99,
+    "restaurant_id": "REST-010",
+    "restaurant_name": "Mediterranean Oasis",
+    "category": "Appetizers",
+    "dietary_tags": [
+      "vegetarian",
+      "vegan"
+    ],
+    "is_popular": false,
+    "calories": 280,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-040",
+    "name": "Lamb Kebab Plate",
+    "description": "Grilled lamb kebabs with rice pilaf, grilled veggies, and tzatziki",
+    "price": 18.99,
+    "restaurant_id": "REST-010",
+    "restaurant_name": "Mediterranean Oasis",
+    "category": "Plates",
+    "dietary_tags": [
+      "gluten-free"
+    ],
+    "is_popular": true,
+    "calories": 650,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-041",
+    "name": "Doro Wat",
+    "description": "Spicy Ethiopian chicken stew slow-cooked with berbere spices and boiled egg",
+    "price": 16.99,
+    "restaurant_id": "REST-011",
+    "restaurant_name": "Addis Ethiopian Kitchen",
+    "category": "Stews",
+    "dietary_tags": [
+      "spicy",
+      "gluten-free",
+      "dairy-free"
+    ],
+    "is_popular": true,
+    "calories": 480,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-042",
+    "name": "Misir Wat",
+    "description": "Spiced red lentil stew with berbere and served on injera",
+    "price": 13.99,
+    "restaurant_id": "REST-011",
+    "restaurant_name": "Addis Ethiopian Kitchen",
+    "category": "Stews",
+    "dietary_tags": [
+      "vegetarian",
+      "vegan",
+      "spicy",
+      "gluten-free"
+    ],
+    "is_popular": true,
+    "calories": 380,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-043",
+    "name": "Vegetarian Combo",
+    "description": "Assortment of lentil, chickpea, and vegetable stews on injera",
+    "price": 15.99,
+    "restaurant_id": "REST-011",
+    "restaurant_name": "Addis Ethiopian Kitchen",
+    "category": "Combos",
+    "dietary_tags": [
+      "vegetarian",
+      "vegan",
+      "gluten-free"
+    ],
+    "is_popular": false,
+    "calories": 520,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-044",
+    "name": "Tibs (Sauteed Beef)",
+    "description": "Cubed beef sauteed with rosemary, jalapeno, onion, and tomato",
+    "price": 17.99,
+    "restaurant_id": "REST-011",
+    "restaurant_name": "Addis Ethiopian Kitchen",
+    "category": "Entrees",
+    "dietary_tags": [
+      "spicy",
+      "gluten-free",
+      "dairy-free"
+    ],
+    "is_popular": true,
+    "calories": 450,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-045",
+    "name": "Coq au Vin",
+    "description": "Braised chicken in Burgundy wine with mushrooms, pearl onions, and bacon",
+    "price": 24.99,
+    "restaurant_id": "REST-012",
+    "restaurant_name": "Le Petit Bistro",
+    "category": "Entrees",
+    "dietary_tags": [
+      "gluten-free"
+    ],
+    "is_popular": true,
+    "calories": 620,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-046",
+    "name": "Croque Monsieur",
+    "description": "Grilled ham and Gruyere sandwich with bechamel sauce",
+    "price": 14.99,
+    "restaurant_id": "REST-012",
+    "restaurant_name": "Le Petit Bistro",
+    "category": "Sandwiches",
+    "dietary_tags": [],
+    "is_popular": true,
+    "calories": 580,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-047",
+    "name": "Chocolate Mousse",
+    "description": "Rich dark chocolate mousse with whipped cream and berries",
+    "price": 10.99,
+    "restaurant_id": "REST-012",
+    "restaurant_name": "Le Petit Bistro",
+    "category": "Desserts",
+    "dietary_tags": [
+      "vegetarian",
+      "gluten-free"
+    ],
+    "is_popular": true,
+    "calories": 380,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-048",
+    "name": "French Onion Soup",
+    "description": "Caramelized onion soup with Gruyere crouton gratin",
+    "price": 11.99,
+    "restaurant_id": "REST-012",
+    "restaurant_name": "Le Petit Bistro",
+    "category": "Soups",
+    "dietary_tags": [
+      "vegetarian"
+    ],
+    "is_popular": false,
+    "calories": 320,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-049",
+    "name": "Margherita DOC",
+    "description": "DOP San Marzano, buffalo mozzarella, fresh basil in 900-degree oven",
+    "price": 17.99,
+    "restaurant_id": "REST-013",
+    "restaurant_name": "Napoli Pizza Co.",
+    "category": "Pizza",
+    "dietary_tags": [
+      "vegetarian"
+    ],
+    "is_popular": true,
+    "calories": 720,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-050",
+    "name": "Diavola Pizza",
+    "description": "Spicy salami, chili flakes, mozzarella, and San Marzano tomatoes",
+    "price": 19.99,
+    "restaurant_id": "REST-013",
+    "restaurant_name": "Napoli Pizza Co.",
+    "category": "Pizza",
+    "dietary_tags": [
+      "spicy"
+    ],
+    "is_popular": true,
+    "calories": 810,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-051",
+    "name": "Quattro Formaggi",
+    "description": "Four cheese pizza with mozzarella, gorgonzola, fontina, and parmesan",
+    "price": 20.99,
+    "restaurant_id": "REST-013",
+    "restaurant_name": "Napoli Pizza Co.",
+    "category": "Pizza",
+    "dietary_tags": [
+      "vegetarian"
+    ],
+    "is_popular": false,
+    "calories": 850,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-052",
+    "name": "Smash Burger",
+    "description": "Double smash patty with American cheese, pickles, onions, and secret sauce",
+    "price": 14.99,
+    "restaurant_id": "REST-014",
+    "restaurant_name": "Stackhouse Burgers",
+    "category": "Burgers",
+    "dietary_tags": [],
+    "is_popular": true,
+    "calories": 720,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-053",
+    "name": "Truffle Mushroom Burger",
+    "description": "Angus patty with truffle aioli, sauteed mushrooms, and Swiss cheese",
+    "price": 17.99,
+    "restaurant_id": "REST-014",
+    "restaurant_name": "Stackhouse Burgers",
+    "category": "Burgers",
+    "dietary_tags": [],
+    "is_popular": true,
+    "calories": 810,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-054",
+    "name": "Oreo Milkshake",
+    "description": "Hand-spun milkshake with Oreo cookies and whipped cream",
+    "price": 7.99,
+    "restaurant_id": "REST-014",
+    "restaurant_name": "Stackhouse Burgers",
+    "category": "Drinks",
+    "dietary_tags": [
+      "vegetarian"
+    ],
+    "is_popular": true,
+    "calories": 580,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-055",
+    "name": "Harvest Bowl",
+    "description": "Quinoa, roasted sweet potato, kale, avocado, and lemon tahini dressing",
+    "price": 14.99,
+    "restaurant_id": "REST-015",
+    "restaurant_name": "Green Leaf Salads",
+    "category": "Bowls",
+    "dietary_tags": [
+      "vegetarian",
+      "vegan",
+      "gluten-free"
+    ],
+    "is_popular": true,
+    "calories": 420,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-056",
+    "name": "Greek Salad",
+    "description": "Mixed greens, feta, kalamata olives, cucumber, tomato, and red onion",
+    "price": 12.99,
+    "restaurant_id": "REST-015",
+    "restaurant_name": "Green Leaf Salads",
+    "category": "Salads",
+    "dietary_tags": [
+      "vegetarian",
+      "gluten-free"
+    ],
+    "is_popular": true,
+    "calories": 320,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-057",
+    "name": "Green Detox Juice",
+    "description": "Kale, cucumber, celery, green apple, ginger, and lemon",
+    "price": 8.99,
+    "restaurant_id": "REST-015",
+    "restaurant_name": "Green Leaf Salads",
+    "category": "Juices",
+    "dietary_tags": [
+      "vegetarian",
+      "vegan",
+      "gluten-free"
+    ],
+    "is_popular": false,
+    "calories": 120,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-058",
+    "name": "Acai Bowl",
+    "description": "Blended acai with granola, banana, strawberry, and honey drizzle",
+    "price": 13.99,
+    "restaurant_id": "REST-015",
+    "restaurant_name": "Green Leaf Salads",
+    "category": "Bowls",
+    "dietary_tags": [
+      "vegetarian",
+      "gluten-free"
+    ],
+    "is_popular": true,
+    "calories": 380,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-059",
+    "name": "Tonkotsu Ramen",
+    "description": "18-hour pork bone broth with chashu, ajitama egg, nori, and noodles",
+    "price": 16.99,
+    "restaurant_id": "REST-016",
+    "restaurant_name": "Ramen Yamamoto",
+    "category": "Ramen",
+    "dietary_tags": [],
+    "is_popular": true,
+    "calories": 680,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-060",
+    "name": "Spicy Miso Ramen",
+    "description": "Rich miso broth with chili oil, ground pork, corn, and bean sprouts",
+    "price": 17.99,
+    "restaurant_id": "REST-016",
+    "restaurant_name": "Ramen Yamamoto",
+    "category": "Ramen",
+    "dietary_tags": [
+      "spicy"
+    ],
+    "is_popular": true,
+    "calories": 720,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-061",
+    "name": "Gyoza (6pc)",
+    "description": "Pan-fried pork dumplings with ginger dipping sauce",
+    "price": 8.99,
+    "restaurant_id": "REST-016",
+    "restaurant_name": "Ramen Yamamoto",
+    "category": "Appetizers",
+    "dietary_tags": [],
+    "is_popular": false,
+    "calories": 320,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-062",
+    "name": "Karaage Chicken",
+    "description": "Japanese-style fried chicken with kewpie mayo and lemon",
+    "price": 10.99,
+    "restaurant_id": "REST-016",
+    "restaurant_name": "Ramen Yamamoto",
+    "category": "Appetizers",
+    "dietary_tags": [],
+    "is_popular": true,
+    "calories": 420,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-063",
+    "name": "Masala Dosa",
+    "description": "Crispy rice crepe filled with spiced potatoes, served with sambar and chutney",
+    "price": 12.99,
+    "restaurant_id": "REST-017",
+    "restaurant_name": "Curry House",
+    "category": "Dosas",
+    "dietary_tags": [
+      "vegetarian",
+      "vegan",
+      "gluten-free"
+    ],
+    "is_popular": true,
+    "calories": 380,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-064",
+    "name": "Paneer Tikka",
+    "description": "Grilled cottage cheese cubes marinated in spiced yogurt",
+    "price": 13.99,
+    "restaurant_id": "REST-017",
+    "restaurant_name": "Curry House",
+    "category": "Appetizers",
+    "dietary_tags": [
+      "vegetarian",
+      "gluten-free"
+    ],
+    "is_popular": true,
+    "calories": 320,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-065",
+    "name": "Lamb Vindaloo",
+    "description": "Spicy Goan-style lamb curry with potatoes and aromatic spices",
+    "price": 18.99,
+    "restaurant_id": "REST-017",
+    "restaurant_name": "Curry House",
+    "category": "Curries",
+    "dietary_tags": [
+      "spicy",
+      "gluten-free"
+    ],
+    "is_popular": false,
+    "calories": 550,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-066",
+    "name": "Birria Tacos (3)",
+    "description": "Slow-braised beef tacos with melted cheese and consomme for dipping",
+    "price": 13.99,
+    "restaurant_id": "REST-018",
+    "restaurant_name": "Taco Libre",
+    "category": "Tacos",
+    "dietary_tags": [],
+    "is_popular": true,
+    "calories": 520,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-067",
+    "name": "Carnitas Plate",
+    "description": "Slow-cooked pulled pork with rice, beans, and fresh salsa verde",
+    "price": 14.99,
+    "restaurant_id": "REST-018",
+    "restaurant_name": "Taco Libre",
+    "category": "Plates",
+    "dietary_tags": [
+      "gluten-free"
+    ],
+    "is_popular": true,
+    "calories": 680,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-068",
+    "name": "Orange Chicken",
+    "description": "Crispy chicken in sweet and tangy orange glaze with steamed rice",
+    "price": 13.99,
+    "restaurant_id": "REST-019",
+    "restaurant_name": "Wok Express",
+    "category": "Entrees",
+    "dietary_tags": [],
+    "is_popular": true,
+    "calories": 620,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-069",
+    "name": "Beef Chow Mein",
+    "description": "Wok-fried egg noodles with beef and vegetables in savory sauce",
+    "price": 12.99,
+    "restaurant_id": "REST-019",
+    "restaurant_name": "Wok Express",
+    "category": "Noodles",
+    "dietary_tags": [],
+    "is_popular": true,
+    "calories": 560,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-070",
+    "name": "Egg Fried Rice",
+    "description": "Wok-fried rice with egg, green onions, and peas",
+    "price": 9.99,
+    "restaurant_id": "REST-019",
+    "restaurant_name": "Wok Express",
+    "category": "Rice",
+    "dietary_tags": [
+      "vegetarian"
+    ],
+    "is_popular": false,
+    "calories": 420,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-071",
+    "name": "Clam Chowder Bowl",
+    "description": "Creamy New England clam chowder served in a sourdough bread bowl",
+    "price": 14.99,
+    "restaurant_id": "REST-020",
+    "restaurant_name": "Pescatore Seafood",
+    "category": "Soups",
+    "dietary_tags": [
+      "contains-shellfish"
+    ],
+    "is_popular": true,
+    "calories": 480,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-072",
+    "name": "Grilled Salmon",
+    "description": "Wild-caught Pacific salmon with lemon dill sauce and seasonal vegetables",
+    "price": 26.99,
+    "restaurant_id": "REST-020",
+    "restaurant_name": "Pescatore Seafood",
+    "category": "Entrees",
+    "dietary_tags": [
+      "gluten-free"
+    ],
+    "is_popular": true,
+    "calories": 520,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-073",
+    "name": "Fish and Chips",
+    "description": "Beer-battered Pacific cod with fries, coleslaw, and tartar sauce",
+    "price": 18.99,
+    "restaurant_id": "REST-020",
+    "restaurant_name": "Pescatore Seafood",
+    "category": "Entrees",
+    "dietary_tags": [],
+    "is_popular": true,
+    "calories": 780,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-074",
+    "name": "Shrimp Cocktail",
+    "description": "Chilled jumbo shrimp with zesty cocktail sauce and lemon",
+    "price": 15.99,
+    "restaurant_id": "REST-020",
+    "restaurant_name": "Pescatore Seafood",
+    "category": "Appetizers",
+    "dietary_tags": [
+      "contains-shellfish",
+      "gluten-free"
+    ],
+    "is_popular": false,
+    "calories": 180,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-075",
+    "name": "Eggs Benedict",
+    "description": "Poached eggs on English muffin with Canadian bacon and hollandaise",
+    "price": 15.99,
+    "restaurant_id": "REST-021",
+    "restaurant_name": "Sunrise Breakfast Co.",
+    "category": "Eggs",
+    "dietary_tags": [],
+    "is_popular": true,
+    "calories": 620,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-076",
+    "name": "Fluffy Pancakes (3)",
+    "description": "Buttermilk pancakes with maple syrup, butter, and fresh berries",
+    "price": 12.99,
+    "restaurant_id": "REST-021",
+    "restaurant_name": "Sunrise Breakfast Co.",
+    "category": "Pancakes",
+    "dietary_tags": [
+      "vegetarian"
+    ],
+    "is_popular": true,
+    "calories": 580,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-077",
+    "name": "Avocado Toast",
+    "description": "Smashed avocado on sourdough with cherry tomatoes, radish, and everything seasoning",
+    "price": 13.99,
+    "restaurant_id": "REST-021",
+    "restaurant_name": "Sunrise Breakfast Co.",
+    "category": "Toast",
+    "dietary_tags": [
+      "vegetarian",
+      "vegan"
+    ],
+    "is_popular": true,
+    "calories": 380,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-078",
+    "name": "Ahi Tuna Poke Bowl",
+    "description": "Fresh ahi tuna, rice, edamame, seaweed salad, and spicy mayo",
+    "price": 16.99,
+    "restaurant_id": "REST-022",
+    "restaurant_name": "Poke Paradise",
+    "category": "Poke Bowls",
+    "dietary_tags": [
+      "gluten-free"
+    ],
+    "is_popular": true,
+    "calories": 450,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-079",
+    "name": "Salmon Poke Bowl",
+    "description": "Fresh salmon, avocado, mango, cucumber, and ponzu sauce",
+    "price": 17.99,
+    "restaurant_id": "REST-022",
+    "restaurant_name": "Poke Paradise",
+    "category": "Poke Bowls",
+    "dietary_tags": [
+      "gluten-free"
+    ],
+    "is_popular": true,
+    "calories": 470,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-080",
+    "name": "Tofu Poke Bowl",
+    "description": "Marinated tofu, avocado, edamame, pickled ginger, and sesame dressing",
+    "price": 14.99,
+    "restaurant_id": "REST-022",
+    "restaurant_name": "Poke Paradise",
+    "category": "Poke Bowls",
+    "dietary_tags": [
+      "vegetarian",
+      "vegan",
+      "gluten-free"
+    ],
+    "is_popular": false,
+    "calories": 380,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-081",
+    "name": "Smoked Brisket Plate",
+    "description": "14-hour smoked brisket with mac and cheese, coleslaw, and cornbread",
+    "price": 22.99,
+    "restaurant_id": "REST-023",
+    "restaurant_name": "Smokehouse BBQ",
+    "category": "Plates",
+    "dietary_tags": [],
+    "is_popular": true,
+    "calories": 920,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-082",
+    "name": "Pulled Pork Sandwich",
+    "description": "Slow-smoked pulled pork with tangy slaw on a brioche bun",
+    "price": 14.99,
+    "restaurant_id": "REST-023",
+    "restaurant_name": "Smokehouse BBQ",
+    "category": "Sandwiches",
+    "dietary_tags": [],
+    "is_popular": true,
+    "calories": 680,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-083",
+    "name": "Smoked Wings (8pc)",
+    "description": "Smoked and fried wings with Alabama white sauce",
+    "price": 13.99,
+    "restaurant_id": "REST-023",
+    "restaurant_name": "Smokehouse BBQ",
+    "category": "Appetizers",
+    "dietary_tags": [
+      "gluten-free"
+    ],
+    "is_popular": false,
+    "calories": 520,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-084",
+    "name": "Massaman Curry",
+    "description": "Rich peanut curry with beef, potatoes, and crispy shallots over rice",
+    "price": 17.99,
+    "restaurant_id": "REST-024",
+    "restaurant_name": "Spice Route",
+    "category": "Curries",
+    "dietary_tags": [
+      "contains-nuts",
+      "spicy"
+    ],
+    "is_popular": true,
+    "calories": 620,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-085",
+    "name": "Papaya Salad",
+    "description": "Shredded green papaya with lime, chili, peanuts, and dried shrimp",
+    "price": 12.99,
+    "restaurant_id": "REST-024",
+    "restaurant_name": "Spice Route",
+    "category": "Salads",
+    "dietary_tags": [
+      "spicy",
+      "contains-nuts",
+      "contains-shellfish",
+      "gluten-free"
+    ],
+    "is_popular": false,
+    "calories": 220,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-086",
+    "name": "Falafel Wrap",
+    "description": "Crispy falafel in warm pita with tahini, pickles, and Israeli salad",
+    "price": 11.99,
+    "restaurant_id": "REST-025",
+    "restaurant_name": "Falafel King",
+    "category": "Wraps",
+    "dietary_tags": [
+      "vegetarian",
+      "vegan"
+    ],
+    "is_popular": true,
+    "calories": 480,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-087",
+    "name": "Shawarma Plate",
+    "description": "Sliced lamb and chicken shawarma with rice, salad, and garlic sauce",
+    "price": 15.99,
+    "restaurant_id": "REST-025",
+    "restaurant_name": "Falafel King",
+    "category": "Plates",
+    "dietary_tags": [],
+    "is_popular": true,
+    "calories": 650,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-088",
+    "name": "Xiao Long Bao (6pc)",
+    "description": "Delicate soup dumplings with pork and rich broth inside",
+    "price": 10.99,
+    "restaurant_id": "REST-026",
+    "restaurant_name": "Dim Sum House",
+    "category": "Dim Sum",
+    "dietary_tags": [],
+    "is_popular": true,
+    "calories": 340,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-089",
+    "name": "Cheung Fun",
+    "description": "Silky rice noodle rolls filled with shrimp and soy sauce",
+    "price": 7.99,
+    "restaurant_id": "REST-026",
+    "restaurant_name": "Dim Sum House",
+    "category": "Dim Sum",
+    "dietary_tags": [
+      "contains-shellfish"
+    ],
+    "is_popular": true,
+    "calories": 220,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-090",
+    "name": "Egg Tarts (3pc)",
+    "description": "Flaky pastry shells with creamy egg custard filling",
+    "price": 5.99,
+    "restaurant_id": "REST-026",
+    "restaurant_name": "Dim Sum House",
+    "category": "Desserts",
+    "dietary_tags": [
+      "vegetarian"
+    ],
+    "is_popular": true,
+    "calories": 280,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-091",
+    "name": "Cacio e Pepe",
+    "description": "Fresh tonnarelli pasta with Pecorino Romano and black pepper",
+    "price": 18.99,
+    "restaurant_id": "REST-027",
+    "restaurant_name": "Pasta Fresca",
+    "category": "Pasta",
+    "dietary_tags": [
+      "vegetarian"
+    ],
+    "is_popular": true,
+    "calories": 620,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-092",
+    "name": "Pappardelle Bolognese",
+    "description": "Wide ribbon pasta with slow-cooked beef and pork ragu",
+    "price": 21.99,
+    "restaurant_id": "REST-027",
+    "restaurant_name": "Pasta Fresca",
+    "category": "Pasta",
+    "dietary_tags": [],
+    "is_popular": true,
+    "calories": 720,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-093",
+    "name": "Mushroom Risotto",
+    "description": "Creamy Arborio rice with wild mushrooms, truffle oil, and parmesan",
+    "price": 19.99,
+    "restaurant_id": "REST-027",
+    "restaurant_name": "Pasta Fresca",
+    "category": "Risotto",
+    "dietary_tags": [
+      "vegetarian",
+      "gluten-free"
+    ],
+    "is_popular": false,
+    "calories": 580,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-094",
+    "name": "Buddha Bowl",
+    "description": "Brown rice, roasted chickpeas, sweet potato, kale, avocado, and tahini",
+    "price": 15.99,
+    "restaurant_id": "REST-028",
+    "restaurant_name": "Veggie Delight",
+    "category": "Bowls",
+    "dietary_tags": [
+      "vegetarian",
+      "vegan",
+      "gluten-free"
+    ],
+    "is_popular": true,
+    "calories": 450,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-095",
+    "name": "Beyond Burger",
+    "description": "Plant-based patty with vegan cheese, lettuce, tomato, and special sauce",
+    "price": 16.99,
+    "restaurant_id": "REST-028",
+    "restaurant_name": "Veggie Delight",
+    "category": "Burgers",
+    "dietary_tags": [
+      "vegetarian",
+      "vegan"
+    ],
+    "is_popular": true,
+    "calories": 520,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-096",
+    "name": "Thai Coconut Soup",
+    "description": "Creamy coconut soup with tofu, mushrooms, lemongrass, and lime",
+    "price": 10.99,
+    "restaurant_id": "REST-028",
+    "restaurant_name": "Veggie Delight",
+    "category": "Soups",
+    "dietary_tags": [
+      "vegetarian",
+      "vegan",
+      "gluten-free"
+    ],
+    "is_popular": false,
+    "calories": 280,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-097",
+    "name": "Buffalo Wings (10pc)",
+    "description": "Crispy wings tossed in buffalo sauce with blue cheese and celery",
+    "price": 14.99,
+    "restaurant_id": "REST-029",
+    "restaurant_name": "Wings & Things",
+    "category": "Wings",
+    "dietary_tags": [
+      "spicy",
+      "gluten-free"
+    ],
+    "is_popular": true,
+    "calories": 680,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-098",
+    "name": "Honey Garlic Wings (10pc)",
+    "description": "Sticky sweet honey garlic glazed wings with sesame seeds",
+    "price": 14.99,
+    "restaurant_id": "REST-029",
+    "restaurant_name": "Wings & Things",
+    "category": "Wings",
+    "dietary_tags": [],
+    "is_popular": true,
+    "calories": 720,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-099",
+    "name": "Loaded Nachos",
+    "description": "Tortilla chips with queso, jalapenos, ground beef, sour cream, and salsa",
+    "price": 12.99,
+    "restaurant_id": "REST-029",
+    "restaurant_name": "Wings & Things",
+    "category": "Appetizers",
+    "dietary_tags": [
+      "spicy"
+    ],
+    "is_popular": false,
+    "calories": 780,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-100",
+    "name": "Chicken Gyro",
+    "description": "Seasoned chicken with tzatziki, tomatoes, onion, and feta in warm pita",
+    "price": 13.99,
+    "restaurant_id": "REST-030",
+    "restaurant_name": "Gyro Palace",
+    "category": "Gyros",
+    "dietary_tags": [],
+    "is_popular": true,
+    "calories": 520,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-101",
+    "name": "Lamb Gyro",
+    "description": "Slow-roasted lamb with tzatziki, lettuce, tomato, and onion in pita",
+    "price": 14.99,
+    "restaurant_id": "REST-030",
+    "restaurant_name": "Gyro Palace",
+    "category": "Gyros",
+    "dietary_tags": [],
+    "is_popular": true,
+    "calories": 580,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-102",
+    "name": "Spanakopita",
+    "description": "Flaky phyllo pastry filled with spinach and feta cheese",
+    "price": 8.99,
+    "restaurant_id": "REST-030",
+    "restaurant_name": "Gyro Palace",
+    "category": "Appetizers",
+    "dietary_tags": [
+      "vegetarian"
+    ],
+    "is_popular": false,
+    "calories": 280,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-103",
+    "name": "Chicken Biryani",
+    "description": "Fragrant basmati rice layered with spiced chicken, saffron, and fried onions",
+    "price": 17.99,
+    "restaurant_id": "REST-031",
+    "restaurant_name": "Tikka Flame",
+    "category": "Biryani",
+    "dietary_tags": [
+      "gluten-free"
+    ],
+    "is_popular": true,
+    "calories": 650,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-104",
+    "name": "Seekh Kebab",
+    "description": "Spiced minced lamb kebabs grilled on skewers with mint chutney",
+    "price": 14.99,
+    "restaurant_id": "REST-031",
+    "restaurant_name": "Tikka Flame",
+    "category": "Kebabs",
+    "dietary_tags": [
+      "gluten-free",
+      "halal"
+    ],
+    "is_popular": true,
+    "calories": 420,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-105",
+    "name": "Palak Paneer",
+    "description": "Cottage cheese cubes in creamy spinach gravy with spices",
+    "price": 15.99,
+    "restaurant_id": "REST-031",
+    "restaurant_name": "Tikka Flame",
+    "category": "Curries",
+    "dietary_tags": [
+      "vegetarian",
+      "gluten-free"
+    ],
+    "is_popular": false,
+    "calories": 380,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-106",
+    "name": "Omakase Nigiri Set (12pc)",
+    "description": "Chef's selection of 12 premium seasonal nigiri pieces",
+    "price": 65.99,
+    "restaurant_id": "REST-032",
+    "restaurant_name": "Sushi Zen",
+    "category": "Omakase",
+    "dietary_tags": [
+      "gluten-free"
+    ],
+    "is_popular": true,
+    "calories": 580,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-107",
+    "name": "Wagyu Beef Nigiri",
+    "description": "A5 Wagyu beef seared with truffle salt over sushi rice",
+    "price": 18.99,
+    "restaurant_id": "REST-032",
+    "restaurant_name": "Sushi Zen",
+    "category": "Nigiri",
+    "dietary_tags": [
+      "gluten-free"
+    ],
+    "is_popular": true,
+    "calories": 180,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-108",
+    "name": "Uni Sashimi",
+    "description": "Fresh sea urchin from Hokkaido served on a cedar plank",
+    "price": 24.99,
+    "restaurant_id": "REST-032",
+    "restaurant_name": "Sushi Zen",
+    "category": "Sashimi",
+    "dietary_tags": [
+      "gluten-free"
+    ],
+    "is_popular": false,
+    "calories": 120,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-109",
+    "name": "Brown Sugar Boba Milk Tea",
+    "description": "Fresh milk tea with hand-made brown sugar tapioca pearls",
+    "price": 6.99,
+    "restaurant_id": "REST-033",
+    "restaurant_name": "Boba Tea House",
+    "category": "Drinks",
+    "dietary_tags": [
+      "vegetarian"
+    ],
+    "is_popular": true,
+    "calories": 380,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-110",
+    "name": "Popcorn Chicken",
+    "description": "Taiwanese-style crispy popcorn chicken with basil and chili salt",
+    "price": 9.99,
+    "restaurant_id": "REST-033",
+    "restaurant_name": "Boba Tea House",
+    "category": "Snacks",
+    "dietary_tags": [
+      "spicy"
+    ],
+    "is_popular": true,
+    "calories": 420,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-111",
+    "name": "Beef Noodle Soup",
+    "description": "Rich braised beef broth with tender beef shank and hand-pulled noodles",
+    "price": 14.99,
+    "restaurant_id": "REST-033",
+    "restaurant_name": "Boba Tea House",
+    "category": "Soups",
+    "dietary_tags": [],
+    "is_popular": true,
+    "calories": 520,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-112",
+    "name": "Taro Milk Tea",
+    "description": "Creamy taro milk tea with chewy tapioca pearls",
+    "price": 6.49,
+    "restaurant_id": "REST-033",
+    "restaurant_name": "Boba Tea House",
+    "category": "Drinks",
+    "dietary_tags": [
+      "vegetarian"
+    ],
+    "is_popular": false,
+    "calories": 350,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-113",
+    "name": "Nutella Banana Crepe",
+    "description": "Warm crepe with Nutella, fresh banana, and whipped cream",
+    "price": 12.99,
+    "restaurant_id": "REST-034",
+    "restaurant_name": "Crepe Corner",
+    "category": "Sweet Crepes",
+    "dietary_tags": [
+      "vegetarian",
+      "contains-nuts"
+    ],
+    "is_popular": true,
+    "calories": 480,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-114",
+    "name": "Ham & Cheese Galette",
+    "description": "Buckwheat galette with ham, Gruyere, and a sunny-side egg",
+    "price": 14.99,
+    "restaurant_id": "REST-034",
+    "restaurant_name": "Crepe Corner",
+    "category": "Savory Galettes",
+    "dietary_tags": [
+      "gluten-free"
+    ],
+    "is_popular": true,
+    "calories": 420,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-115",
+    "name": "Strawberry Cream Crepe",
+    "description": "Fresh strawberries with pastry cream and powdered sugar",
+    "price": 11.99,
+    "restaurant_id": "REST-034",
+    "restaurant_name": "Crepe Corner",
+    "category": "Sweet Crepes",
+    "dietary_tags": [
+      "vegetarian"
+    ],
+    "is_popular": false,
+    "calories": 380,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-116",
+    "name": "Super Burrito",
+    "description": "Choice of meat, rice, beans, cheese, sour cream, guac, and salsa in a giant tortilla",
+    "price": 14.99,
+    "restaurant_id": "REST-035",
+    "restaurant_name": "Burrito Bandito",
+    "category": "Burritos",
+    "dietary_tags": [],
+    "is_popular": true,
+    "calories": 950,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-117",
+    "name": "Loaded Nachos Grande",
+    "description": "Tortilla chips piled high with beans, cheese, meat, jalapenos, and crema",
+    "price": 13.99,
+    "restaurant_id": "REST-035",
+    "restaurant_name": "Burrito Bandito",
+    "category": "Appetizers",
+    "dietary_tags": [
+      "spicy"
+    ],
+    "is_popular": true,
+    "calories": 820,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-118",
+    "name": "Veggie Burrito",
+    "description": "Grilled veggies, rice, black beans, guacamole, and pico de gallo",
+    "price": 12.99,
+    "restaurant_id": "REST-035",
+    "restaurant_name": "Burrito Bandito",
+    "category": "Burritos",
+    "dietary_tags": [
+      "vegetarian"
+    ],
+    "is_popular": false,
+    "calories": 720,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-119",
+    "name": "Tikka Wrap",
+    "description": "Grilled chicken tikka wrapped in naan with raita, lettuce, and pickled onions",
+    "price": 11.99,
+    "restaurant_id": "REST-036",
+    "restaurant_name": "Naan Stop",
+    "category": "Wraps",
+    "dietary_tags": [
+      "halal"
+    ],
+    "is_popular": true,
+    "calories": 480,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-120",
+    "name": "Chana Masala Bowl",
+    "description": "Spiced chickpeas over rice with pickled onions and cilantro chutney",
+    "price": 12.99,
+    "restaurant_id": "REST-036",
+    "restaurant_name": "Naan Stop",
+    "category": "Bowls",
+    "dietary_tags": [
+      "vegetarian",
+      "vegan",
+      "gluten-free",
+      "halal"
+    ],
+    "is_popular": true,
+    "calories": 420,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-121",
+    "name": "Samosa Chaat",
+    "description": "Crushed samosas topped with chickpeas, yogurt, tamarind, and mint chutneys",
+    "price": 8.99,
+    "restaurant_id": "REST-036",
+    "restaurant_name": "Naan Stop",
+    "category": "Street Food",
+    "dietary_tags": [
+      "vegetarian"
+    ],
+    "is_popular": false,
+    "calories": 350,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-122",
+    "name": "Rainbow Roll",
+    "description": "Crab, avocado inside topped with tuna, salmon, yellowtail, and shrimp",
+    "price": 18.99,
+    "restaurant_id": "REST-037",
+    "restaurant_name": "Ocean Sushi Boat",
+    "category": "Specialty Rolls",
+    "dietary_tags": [
+      "contains-shellfish"
+    ],
+    "is_popular": true,
+    "calories": 420,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-123",
+    "name": "Tempura Udon",
+    "description": "Thick wheat noodles in hot dashi broth with shrimp tempura",
+    "price": 15.99,
+    "restaurant_id": "REST-037",
+    "restaurant_name": "Ocean Sushi Boat",
+    "category": "Noodles",
+    "dietary_tags": [
+      "contains-shellfish"
+    ],
+    "is_popular": true,
+    "calories": 520,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-124",
+    "name": "Edamame",
+    "description": "Steamed soybean pods with sea salt",
+    "price": 5.99,
+    "restaurant_id": "REST-037",
+    "restaurant_name": "Ocean Sushi Boat",
+    "category": "Appetizers",
+    "dietary_tags": [
+      "vegetarian",
+      "vegan",
+      "gluten-free"
+    ],
+    "is_popular": false,
+    "calories": 120,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-125",
+    "name": "Ma La Hot Pot (for 2)",
+    "description": "Spicy Szechuan broth with sliced meats, tofu, vegetables, and noodles",
+    "price": 38.99,
+    "restaurant_id": "REST-038",
+    "restaurant_name": "Szechuan Fire",
+    "category": "Hot Pot",
+    "dietary_tags": [
+      "spicy"
+    ],
+    "is_popular": true,
+    "calories": 850,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-126",
+    "name": "Dan Dan Noodles",
+    "description": "Wheat noodles in spicy sesame-peanut sauce with ground pork",
+    "price": 13.99,
+    "restaurant_id": "REST-038",
+    "restaurant_name": "Szechuan Fire",
+    "category": "Noodles",
+    "dietary_tags": [
+      "spicy",
+      "contains-nuts"
+    ],
+    "is_popular": true,
+    "calories": 520,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-127",
+    "name": "Mapo Tofu",
+    "description": "Silky tofu in fiery chili bean sauce with Szechuan peppercorns and ground pork",
+    "price": 14.99,
+    "restaurant_id": "REST-038",
+    "restaurant_name": "Szechuan Fire",
+    "category": "Entrees",
+    "dietary_tags": [
+      "spicy"
+    ],
+    "is_popular": true,
+    "calories": 380,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-128",
+    "name": "Dry Chili Chicken",
+    "description": "Crispy chicken pieces with dried chilies, peanuts, and Szechuan pepper",
+    "price": 15.99,
+    "restaurant_id": "REST-038",
+    "restaurant_name": "Szechuan Fire",
+    "category": "Entrees",
+    "dietary_tags": [
+      "spicy",
+      "contains-nuts"
+    ],
+    "is_popular": false,
+    "calories": 520,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-129",
+    "name": "Italian Sub",
+    "description": "Salami, capicola, ham, provolone, lettuce, tomato, and Italian dressing",
+    "price": 12.99,
+    "restaurant_id": "REST-039",
+    "restaurant_name": "The Sandwich Shop",
+    "category": "Sandwiches",
+    "dietary_tags": [],
+    "is_popular": true,
+    "calories": 620,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-130",
+    "name": "Turkey Club",
+    "description": "Roasted turkey, bacon, avocado, lettuce, and tomato on sourdough",
+    "price": 13.99,
+    "restaurant_id": "REST-039",
+    "restaurant_name": "The Sandwich Shop",
+    "category": "Sandwiches",
+    "dietary_tags": [],
+    "is_popular": true,
+    "calories": 580,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-131",
+    "name": "Tomato Basil Soup",
+    "description": "Creamy roasted tomato soup with fresh basil and grilled bread",
+    "price": 7.99,
+    "restaurant_id": "REST-039",
+    "restaurant_name": "The Sandwich Shop",
+    "category": "Soups",
+    "dietary_tags": [
+      "vegetarian"
+    ],
+    "is_popular": false,
+    "calories": 240,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-132",
+    "name": "Yangnyeom Chicken (10pc)",
+    "description": "Sweet and spicy gochujang-glazed fried chicken pieces",
+    "price": 16.99,
+    "restaurant_id": "REST-040",
+    "restaurant_name": "Korean Fried Chicken Co.",
+    "category": "Chicken",
+    "dietary_tags": [
+      "spicy"
+    ],
+    "is_popular": true,
+    "calories": 720,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-133",
+    "name": "Soy Garlic Chicken (10pc)",
+    "description": "Crispy double-fried chicken glazed with sweet soy garlic sauce",
+    "price": 16.99,
+    "restaurant_id": "REST-040",
+    "restaurant_name": "Korean Fried Chicken Co.",
+    "category": "Chicken",
+    "dietary_tags": [],
+    "is_popular": true,
+    "calories": 700,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-134",
+    "name": "Tteokbokki",
+    "description": "Chewy rice cakes in spicy gochujang sauce with fish cakes",
+    "price": 10.99,
+    "restaurant_id": "REST-040",
+    "restaurant_name": "Korean Fried Chicken Co.",
+    "category": "Sides",
+    "dietary_tags": [
+      "spicy"
+    ],
+    "is_popular": false,
+    "calories": 380,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-135",
+    "name": "Lemongrass Pork Banh Mi",
+    "description": "Grilled lemongrass pork with pate, pickled daikon, carrots, and jalapeno",
+    "price": 10.99,
+    "restaurant_id": "REST-041",
+    "restaurant_name": "Banh Mi Brothers",
+    "category": "Banh Mi",
+    "dietary_tags": [],
+    "is_popular": true,
+    "calories": 480,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-136",
+    "name": "Crispy Tofu Banh Mi",
+    "description": "Fried tofu with house sauce, pickled veggies, cilantro, and jalapeno",
+    "price": 9.99,
+    "restaurant_id": "REST-041",
+    "restaurant_name": "Banh Mi Brothers",
+    "category": "Banh Mi",
+    "dietary_tags": [
+      "vegetarian",
+      "vegan"
+    ],
+    "is_popular": false,
+    "calories": 380,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-137",
+    "name": "Vietnamese Iced Coffee",
+    "description": "Strong drip coffee with sweetened condensed milk over ice",
+    "price": 4.99,
+    "restaurant_id": "REST-041",
+    "restaurant_name": "Banh Mi Brothers",
+    "category": "Drinks",
+    "dietary_tags": [
+      "vegetarian"
+    ],
+    "is_popular": true,
+    "calories": 180,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-138",
+    "name": "Pollo a la Brasa (Quarter)",
+    "description": "Peruvian rotisserie chicken with aji verde sauce and fries",
+    "price": 12.99,
+    "restaurant_id": "REST-042",
+    "restaurant_name": "La Cocina Peruana",
+    "category": "Chicken",
+    "dietary_tags": [
+      "gluten-free"
+    ],
+    "is_popular": true,
+    "calories": 580,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-139",
+    "name": "Ceviche Mixto",
+    "description": "Mixed seafood cured in lime with red onion, cilantro, and sweet potato",
+    "price": 16.99,
+    "restaurant_id": "REST-042",
+    "restaurant_name": "La Cocina Peruana",
+    "category": "Starters",
+    "dietary_tags": [
+      "contains-shellfish",
+      "gluten-free"
+    ],
+    "is_popular": true,
+    "calories": 280,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-140",
+    "name": "Lomo Saltado",
+    "description": "Stir-fried beef with tomatoes, onions, fries, and rice",
+    "price": 18.99,
+    "restaurant_id": "REST-042",
+    "restaurant_name": "La Cocina Peruana",
+    "category": "Entrees",
+    "dietary_tags": [
+      "gluten-free"
+    ],
+    "is_popular": true,
+    "calories": 720,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-141",
+    "name": "Wonton Noodle Soup",
+    "description": "Springy egg noodles with pork and shrimp wontons in clear broth",
+    "price": 12.99,
+    "restaurant_id": "REST-043",
+    "restaurant_name": "Wonton Noodle Express",
+    "category": "Soups",
+    "dietary_tags": [
+      "contains-shellfish"
+    ],
+    "is_popular": true,
+    "calories": 420,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-142",
+    "name": "Roast Duck over Rice",
+    "description": "Cantonese roast duck with steamed rice and bok choy",
+    "price": 14.99,
+    "restaurant_id": "REST-043",
+    "restaurant_name": "Wonton Noodle Express",
+    "category": "Rice Plates",
+    "dietary_tags": [],
+    "is_popular": true,
+    "calories": 580,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-143",
+    "name": "Congee with Century Egg",
+    "description": "Silky rice porridge with century egg, pork floss, and ginger",
+    "price": 9.99,
+    "restaurant_id": "REST-043",
+    "restaurant_name": "Wonton Noodle Express",
+    "category": "Porridge",
+    "dietary_tags": [],
+    "is_popular": false,
+    "calories": 320,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-144",
+    "name": "NY Cheese Slice",
+    "description": "Classic New York-style cheese pizza slice with tangy tomato sauce",
+    "price": 4.99,
+    "restaurant_id": "REST-044",
+    "restaurant_name": "Pizza Republic",
+    "category": "Slices",
+    "dietary_tags": [
+      "vegetarian"
+    ],
+    "is_popular": true,
+    "calories": 320,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-145",
+    "name": "Pepperoni Slice",
+    "description": "Generous pepperoni with mozzarella on a thin, foldable crust",
+    "price": 5.49,
+    "restaurant_id": "REST-044",
+    "restaurant_name": "Pizza Republic",
+    "category": "Slices",
+    "dietary_tags": [],
+    "is_popular": true,
+    "calories": 380,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-146",
+    "name": "Garlic Knots (6pc)",
+    "description": "Buttery garlic knots with marinara dipping sauce",
+    "price": 5.99,
+    "restaurant_id": "REST-044",
+    "restaurant_name": "Pizza Republic",
+    "category": "Sides",
+    "dietary_tags": [
+      "vegetarian"
+    ],
+    "is_popular": false,
+    "calories": 420,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-147",
+    "name": "Masala Dosa Special",
+    "description": "Extra-large dosa with potato masala, three chutneys, and sambar",
+    "price": 13.99,
+    "restaurant_id": "REST-045",
+    "restaurant_name": "Masala Dosa Corner",
+    "category": "Dosas",
+    "dietary_tags": [
+      "vegetarian",
+      "vegan",
+      "gluten-free"
+    ],
+    "is_popular": true,
+    "calories": 420,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-148",
+    "name": "Idli Sambar (4pc)",
+    "description": "Steamed rice cakes with lentil soup and coconut chutney",
+    "price": 8.99,
+    "restaurant_id": "REST-045",
+    "restaurant_name": "Masala Dosa Corner",
+    "category": "Breakfast",
+    "dietary_tags": [
+      "vegetarian",
+      "vegan",
+      "gluten-free"
+    ],
+    "is_popular": false,
+    "calories": 280,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-149",
+    "name": "South Indian Thali",
+    "description": "Complete meal with rice, sambar, rasam, vegetable curries, and papad",
+    "price": 15.99,
+    "restaurant_id": "REST-045",
+    "restaurant_name": "Masala Dosa Corner",
+    "category": "Thali",
+    "dietary_tags": [
+      "vegetarian",
+      "gluten-free"
+    ],
+    "is_popular": true,
+    "calories": 620,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-150",
+    "name": "Spicy Ahi Poke Bowl",
+    "description": "Ahi tuna with sriracha mayo, jalapeno, crispy onion, and sesame",
+    "price": 17.99,
+    "restaurant_id": "REST-046",
+    "restaurant_name": "Aloha Poke",
+    "category": "Poke Bowls",
+    "dietary_tags": [
+      "spicy",
+      "gluten-free"
+    ],
+    "is_popular": true,
+    "calories": 480,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-151",
+    "name": "Shrimp Tempura Bowl",
+    "description": "Crispy shrimp tempura over rice with teriyaki glaze and pickled ginger",
+    "price": 16.99,
+    "restaurant_id": "REST-046",
+    "restaurant_name": "Aloha Poke",
+    "category": "Bowls",
+    "dietary_tags": [
+      "contains-shellfish"
+    ],
+    "is_popular": false,
+    "calories": 520,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-152",
+    "name": "Dungeness Crab (whole)",
+    "description": "Whole roasted Dungeness crab with garlic butter and lemon",
+    "price": 42.99,
+    "restaurant_id": "REST-047",
+    "restaurant_name": "The Crab Shack",
+    "category": "Entrees",
+    "dietary_tags": [
+      "contains-shellfish",
+      "gluten-free"
+    ],
+    "is_popular": true,
+    "calories": 680,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-153",
+    "name": "Garlic Noodles",
+    "description": "Signature egg noodles tossed in garlic butter and parmesan",
+    "price": 13.99,
+    "restaurant_id": "REST-047",
+    "restaurant_name": "The Crab Shack",
+    "category": "Sides",
+    "dietary_tags": [
+      "vegetarian"
+    ],
+    "is_popular": true,
+    "calories": 480,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-154",
+    "name": "Cajun Seafood Boil",
+    "description": "Shrimp, crawfish, corn, potatoes, and sausage in Cajun seasoning",
+    "price": 32.99,
+    "restaurant_id": "REST-047",
+    "restaurant_name": "The Crab Shack",
+    "category": "Boils",
+    "dietary_tags": [
+      "contains-shellfish",
+      "spicy",
+      "gluten-free"
+    ],
+    "is_popular": true,
+    "calories": 780,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-155",
+    "name": "New England Lobster Roll",
+    "description": "Chilled lobster meat with lemon mayo on a buttered split-top roll",
+    "price": 28.99,
+    "restaurant_id": "REST-047",
+    "restaurant_name": "The Crab Shack",
+    "category": "Sandwiches",
+    "dietary_tags": [
+      "contains-shellfish"
+    ],
+    "is_popular": true,
+    "calories": 520,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-156",
+    "name": "Beef Empanada (3pc)",
+    "description": "Flaky pastry filled with seasoned ground beef, olives, and egg",
+    "price": 9.99,
+    "restaurant_id": "REST-048",
+    "restaurant_name": "Empanada Loca",
+    "category": "Empanadas",
+    "dietary_tags": [],
+    "is_popular": true,
+    "calories": 420,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-157",
+    "name": "Spinach & Cheese Empanada (3pc)",
+    "description": "Crispy empanadas with spinach, mozzarella, and bechamel",
+    "price": 9.99,
+    "restaurant_id": "REST-048",
+    "restaurant_name": "Empanada Loca",
+    "category": "Empanadas",
+    "dietary_tags": [
+      "vegetarian"
+    ],
+    "is_popular": false,
+    "calories": 380,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-158",
+    "name": "Choripan",
+    "description": "Grilled chorizo on crusty bread with chimichurri sauce",
+    "price": 8.99,
+    "restaurant_id": "REST-048",
+    "restaurant_name": "Empanada Loca",
+    "category": "Sandwiches",
+    "dietary_tags": [],
+    "is_popular": true,
+    "calories": 480,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-159",
+    "name": "Dulce de Leche Churros",
+    "description": "Crispy churros filled with dulce de leche and cinnamon sugar",
+    "price": 7.99,
+    "restaurant_id": "REST-048",
+    "restaurant_name": "Empanada Loca",
+    "category": "Desserts",
+    "dietary_tags": [
+      "vegetarian"
+    ],
+    "is_popular": true,
+    "calories": 380,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-160",
+    "name": "Lamb Rogan Josh",
+    "description": "Slow-braised lamb in aromatic Kashmiri chili and yogurt sauce",
+    "price": 19.99,
+    "restaurant_id": "REST-049",
+    "restaurant_name": "Tandoori Nights",
+    "category": "Curries",
+    "dietary_tags": [
+      "spicy",
+      "gluten-free"
+    ],
+    "is_popular": true,
+    "calories": 580,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-161",
+    "name": "Tandoori Mixed Grill",
+    "description": "Assortment of tandoori chicken, seekh kebab, and paneer tikka",
+    "price": 22.99,
+    "restaurant_id": "REST-049",
+    "restaurant_name": "Tandoori Nights",
+    "category": "Grills",
+    "dietary_tags": [
+      "gluten-free"
+    ],
+    "is_popular": true,
+    "calories": 650,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-162",
+    "name": "Mango Lassi",
+    "description": "Creamy yogurt drink blended with sweet Alphonso mango",
+    "price": 5.99,
+    "restaurant_id": "REST-049",
+    "restaurant_name": "Tandoori Nights",
+    "category": "Drinks",
+    "dietary_tags": [
+      "vegetarian",
+      "gluten-free"
+    ],
+    "is_popular": false,
+    "calories": 220,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-163",
+    "name": "Birria Quesadilla",
+    "description": "Cheese-filled tortilla with birria beef and consomme",
+    "price": 12.99,
+    "restaurant_id": "REST-050",
+    "restaurant_name": "Taco Tuesday",
+    "category": "Quesadillas",
+    "dietary_tags": [],
+    "is_popular": true,
+    "calories": 620,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-164",
+    "name": "Street Corn (Elote)",
+    "description": "Grilled corn with mayo, cotija cheese, chili powder, and lime",
+    "price": 5.99,
+    "restaurant_id": "REST-050",
+    "restaurant_name": "Taco Tuesday",
+    "category": "Sides",
+    "dietary_tags": [
+      "vegetarian",
+      "gluten-free"
+    ],
+    "is_popular": true,
+    "calories": 280,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-165",
+    "name": "Churros (3pc)",
+    "description": "Cinnamon sugar churros with chocolate dipping sauce",
+    "price": 6.99,
+    "restaurant_id": "REST-050",
+    "restaurant_name": "Taco Tuesday",
+    "category": "Desserts",
+    "dietary_tags": [
+      "vegetarian"
+    ],
+    "is_popular": false,
+    "calories": 350,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-166",
+    "name": "Agua Fresca",
+    "description": "Fresh fruit water in rotating flavors: horchata, jamaica, or tamarind",
+    "price": 3.99,
+    "restaurant_id": "REST-050",
+    "restaurant_name": "Taco Tuesday",
+    "category": "Drinks",
+    "dietary_tags": [
+      "vegetarian",
+      "vegan",
+      "gluten-free"
+    ],
+    "is_popular": true,
+    "calories": 120,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-167",
+    "name": "Lanzhou Beef Noodle Soup",
+    "description": "Hand-pulled noodles in clear beef broth with radish, cilantro, and chili oil",
+    "price": 13.99,
+    "restaurant_id": "REST-051",
+    "restaurant_name": "Dragon Noodle House",
+    "category": "Soups",
+    "dietary_tags": [],
+    "is_popular": true,
+    "calories": 480,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-168",
+    "name": "Biang Biang Noodles",
+    "description": "Wide hand-torn belt noodles with chili oil, garlic, and bok choy",
+    "price": 14.99,
+    "restaurant_id": "REST-051",
+    "restaurant_name": "Dragon Noodle House",
+    "category": "Noodles",
+    "dietary_tags": [
+      "spicy"
+    ],
+    "is_popular": true,
+    "calories": 520,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-169",
+    "name": "Cumin Lamb Noodles",
+    "description": "Hand-pulled noodles stir-fried with lamb, cumin, chili, and scallions",
+    "price": 15.99,
+    "restaurant_id": "REST-051",
+    "restaurant_name": "Dragon Noodle House",
+    "category": "Noodles",
+    "dietary_tags": [
+      "spicy"
+    ],
+    "is_popular": true,
+    "calories": 560,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-170",
+    "name": "Chinese Beef Pancake",
+    "description": "Flaky layered flatbread stuffed with seasoned beef and scallions",
+    "price": 8.99,
+    "restaurant_id": "REST-051",
+    "restaurant_name": "Dragon Noodle House",
+    "category": "Appetizers",
+    "dietary_tags": [],
+    "is_popular": false,
+    "calories": 380,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-171",
+    "name": "Grilled Halloumi Plate",
+    "description": "Pan-seared halloumi with arugula, cherry tomatoes, and pomegranate",
+    "price": 15.99,
+    "restaurant_id": "REST-052",
+    "restaurant_name": "Olive & Vine",
+    "category": "Small Plates",
+    "dietary_tags": [
+      "vegetarian",
+      "gluten-free"
+    ],
+    "is_popular": true,
+    "calories": 380,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-172",
+    "name": "Lamb Kofta",
+    "description": "Grilled spiced lamb meatballs with tzatziki and warm pita",
+    "price": 17.99,
+    "restaurant_id": "REST-052",
+    "restaurant_name": "Olive & Vine",
+    "category": "Small Plates",
+    "dietary_tags": [],
+    "is_popular": true,
+    "calories": 480,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-173",
+    "name": "Stuffed Grape Leaves",
+    "description": "Vine leaves stuffed with herbed rice, pine nuts, and currants",
+    "price": 10.99,
+    "restaurant_id": "REST-052",
+    "restaurant_name": "Olive & Vine",
+    "category": "Small Plates",
+    "dietary_tags": [
+      "vegetarian",
+      "vegan",
+      "gluten-free"
+    ],
+    "is_popular": false,
+    "calories": 220,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-174",
+    "name": "Pad See Ew",
+    "description": "Wide rice noodles stir-fried with chicken, egg, broccoli, and sweet soy",
+    "price": 14.99,
+    "restaurant_id": "REST-053",
+    "restaurant_name": "Pad Thai Palace",
+    "category": "Noodles",
+    "dietary_tags": [],
+    "is_popular": true,
+    "calories": 520,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-175",
+    "name": "Pineapple Fried Rice",
+    "description": "Fried rice with shrimp, cashews, raisins, and curry powder served in a pineapple",
+    "price": 16.99,
+    "restaurant_id": "REST-053",
+    "restaurant_name": "Pad Thai Palace",
+    "category": "Rice",
+    "dietary_tags": [
+      "contains-shellfish",
+      "contains-nuts"
+    ],
+    "is_popular": true,
+    "calories": 580,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-176",
+    "name": "Thai Iced Tea",
+    "description": "Sweet and creamy Thai tea with condensed milk over ice",
+    "price": 4.99,
+    "restaurant_id": "REST-053",
+    "restaurant_name": "Pad Thai Palace",
+    "category": "Drinks",
+    "dietary_tags": [
+      "vegetarian"
+    ],
+    "is_popular": false,
+    "calories": 220,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-177",
+    "name": "Torta de Milanesa",
+    "description": "Breaded chicken cutlet with avocado, beans, chipotle, lettuce on telera roll",
+    "price": 11.99,
+    "restaurant_id": "REST-054",
+    "restaurant_name": "Mission Tortas",
+    "category": "Tortas",
+    "dietary_tags": [],
+    "is_popular": true,
+    "calories": 680,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-178",
+    "name": "Cemita Poblana",
+    "description": "Sesame roll with breaded pork, Oaxaca cheese, avocado, and chipotle",
+    "price": 12.99,
+    "restaurant_id": "REST-054",
+    "restaurant_name": "Mission Tortas",
+    "category": "Cemitas",
+    "dietary_tags": [],
+    "is_popular": true,
+    "calories": 720,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-179",
+    "name": "Horchata",
+    "description": "Refreshing cinnamon rice milk drink",
+    "price": 3.99,
+    "restaurant_id": "REST-054",
+    "restaurant_name": "Mission Tortas",
+    "category": "Drinks",
+    "dietary_tags": [
+      "vegetarian",
+      "vegan",
+      "gluten-free"
+    ],
+    "is_popular": true,
+    "calories": 180,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-180",
+    "name": "Umami Shiitake Burger",
+    "description": "Angus patty with shiitake mushrooms, miso glaze, wasabi mayo, and nori",
+    "price": 18.99,
+    "restaurant_id": "REST-055",
+    "restaurant_name": "Umami Burger Bar",
+    "category": "Burgers",
+    "dietary_tags": [],
+    "is_popular": true,
+    "calories": 780,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-181",
+    "name": "Truffle Parmesan Fries",
+    "description": "Crispy fries tossed with truffle oil, parmesan, and fresh herbs",
+    "price": 9.99,
+    "restaurant_id": "REST-055",
+    "restaurant_name": "Umami Burger Bar",
+    "category": "Sides",
+    "dietary_tags": [
+      "vegetarian"
+    ],
+    "is_popular": true,
+    "calories": 480,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-182",
+    "name": "Spicy Miso Burger",
+    "description": "Angus patty with spicy miso glaze, pickled daikon, and shiso leaf",
+    "price": 17.99,
+    "restaurant_id": "REST-055",
+    "restaurant_name": "Umami Burger Bar",
+    "category": "Burgers",
+    "dietary_tags": [
+      "spicy"
+    ],
+    "is_popular": true,
+    "calories": 750,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-183",
+    "name": "Matcha Milkshake",
+    "description": "Hand-spun milkshake with premium matcha and vanilla ice cream",
+    "price": 8.99,
+    "restaurant_id": "REST-055",
+    "restaurant_name": "Umami Burger Bar",
+    "category": "Drinks",
+    "dietary_tags": [
+      "vegetarian"
+    ],
+    "is_popular": false,
+    "calories": 480,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-184",
+    "name": "Chicken Teriyaki Bowl",
+    "description": "Grilled chicken with teriyaki glaze over steamed rice with broccoli",
+    "price": 14.99,
+    "restaurant_id": "REST-001",
+    "restaurant_name": "Sakura Sushi",
+    "category": "Bowls",
+    "dietary_tags": [],
+    "is_popular": false,
+    "calories": 520,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-185",
+    "name": "Agedashi Tofu",
+    "description": "Lightly fried silken tofu in warm dashi broth with bonito flakes",
+    "price": 9.99,
+    "restaurant_id": "REST-001",
+    "restaurant_name": "Sakura Sushi",
+    "category": "Appetizers",
+    "dietary_tags": [
+      "vegetarian"
+    ],
+    "is_popular": false,
+    "calories": 220,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-186",
+    "name": "Penne Arrabbiata",
+    "description": "Penne in spicy tomato sauce with garlic, red chili flakes, and basil",
+    "price": 16.99,
+    "restaurant_id": "REST-003",
+    "restaurant_name": "Bella Trattoria",
+    "category": "Pasta",
+    "dietary_tags": [
+      "vegetarian",
+      "vegan",
+      "spicy"
+    ],
+    "is_popular": false,
+    "calories": 520,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-187",
+    "name": "Chicken Parmesan",
+    "description": "Breaded chicken cutlet topped with marinara and mozzarella over spaghetti",
+    "price": 21.99,
+    "restaurant_id": "REST-003",
+    "restaurant_name": "Bella Trattoria",
+    "category": "Entrees",
+    "dietary_tags": [],
+    "is_popular": true,
+    "calories": 780,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-188",
+    "name": "Veggie Pad Thai",
+    "description": "Rice noodles with tofu, bean sprouts, peanuts, and tamarind sauce",
+    "price": 13.99,
+    "restaurant_id": "REST-005",
+    "restaurant_name": "Thai Basil Garden",
+    "category": "Noodles",
+    "dietary_tags": [
+      "vegetarian",
+      "vegan",
+      "contains-nuts"
+    ],
+    "is_popular": false,
+    "calories": 460,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-189",
+    "name": "Lamb Biryani",
+    "description": "Fragrant basmati rice with slow-cooked lamb, saffron, and crispy onions",
+    "price": 19.99,
+    "restaurant_id": "REST-006",
+    "restaurant_name": "Mumbai Masala House",
+    "category": "Biryani",
+    "dietary_tags": [
+      "gluten-free"
+    ],
+    "is_popular": true,
+    "calories": 680,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-190",
+    "name": "Japchae",
+    "description": "Sweet potato glass noodles stir-fried with vegetables and sesame oil",
+    "price": 13.99,
+    "restaurant_id": "REST-008",
+    "restaurant_name": "Seoul Kitchen",
+    "category": "Noodles",
+    "dietary_tags": [
+      "vegetarian",
+      "vegan",
+      "gluten-free"
+    ],
+    "is_popular": false,
+    "calories": 380,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-191",
+    "name": "Baklava (3pc)",
+    "description": "Layered phyllo pastry with pistachios and honey syrup",
+    "price": 7.99,
+    "restaurant_id": "REST-010",
+    "restaurant_name": "Mediterranean Oasis",
+    "category": "Desserts",
+    "dietary_tags": [
+      "vegetarian",
+      "contains-nuts"
+    ],
+    "is_popular": true,
+    "calories": 320,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-192",
+    "name": "Steak Frites",
+    "description": "Pan-seared hanger steak with herb butter and crispy French fries",
+    "price": 26.99,
+    "restaurant_id": "REST-012",
+    "restaurant_name": "Le Petit Bistro",
+    "category": "Entrees",
+    "dietary_tags": [
+      "gluten-free"
+    ],
+    "is_popular": true,
+    "calories": 720,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-193",
+    "name": "Prosciutto Pizza",
+    "description": "San Marzano, mozzarella, arugula, prosciutto, and shaved parmesan",
+    "price": 21.99,
+    "restaurant_id": "REST-013",
+    "restaurant_name": "Napoli Pizza Co.",
+    "category": "Pizza",
+    "dietary_tags": [],
+    "is_popular": true,
+    "calories": 780,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-194",
+    "name": "Bacon Cheeseburger",
+    "description": "Smash patty with crispy bacon, American cheese, pickles, and ketchup",
+    "price": 15.99,
+    "restaurant_id": "REST-014",
+    "restaurant_name": "Stackhouse Burgers",
+    "category": "Burgers",
+    "dietary_tags": [],
+    "is_popular": true,
+    "calories": 780,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-195",
+    "name": "Shoyu Ramen",
+    "description": "Clear soy-based broth with chicken, menma, nori, and soft-boiled egg",
+    "price": 15.99,
+    "restaurant_id": "REST-016",
+    "restaurant_name": "Ramen Yamamoto",
+    "category": "Ramen",
+    "dietary_tags": [],
+    "is_popular": false,
+    "calories": 580,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-196",
+    "name": "General Tso's Chicken",
+    "description": "Crispy chicken in sweet and spicy sauce with broccoli and rice",
+    "price": 14.99,
+    "restaurant_id": "REST-019",
+    "restaurant_name": "Wok Express",
+    "category": "Entrees",
+    "dietary_tags": [
+      "spicy"
+    ],
+    "is_popular": true,
+    "calories": 650,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-197",
+    "name": "Shrimp Tacos (3)",
+    "description": "Grilled shrimp with mango slaw, chipotle crema, and lime",
+    "price": 13.99,
+    "restaurant_id": "REST-004",
+    "restaurant_name": "Taqueria El Sol",
+    "category": "Tacos",
+    "dietary_tags": [
+      "contains-shellfish"
+    ],
+    "is_popular": true,
+    "calories": 420,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-198",
+    "name": "Bacon Maple Pancakes",
+    "description": "Buttermilk pancakes with candied bacon and maple butter",
+    "price": 14.99,
+    "restaurant_id": "REST-021",
+    "restaurant_name": "Sunrise Breakfast Co.",
+    "category": "Pancakes",
+    "dietary_tags": [],
+    "is_popular": false,
+    "calories": 680,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-199",
+    "name": "Rack of Ribs (Full)",
+    "description": "Full rack of St. Louis ribs with two sides and cornbread",
+    "price": 29.99,
+    "restaurant_id": "REST-023",
+    "restaurant_name": "Smokehouse BBQ",
+    "category": "Plates",
+    "dietary_tags": [],
+    "is_popular": true,
+    "calories": 1100,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-200",
+    "name": "Mac and Cheese",
+    "description": "Creamy four-cheese mac with crispy breadcrumb topping",
+    "price": 8.99,
+    "restaurant_id": "REST-023",
+    "restaurant_name": "Smokehouse BBQ",
+    "category": "Sides",
+    "dietary_tags": [
+      "vegetarian"
+    ],
+    "is_popular": true,
+    "calories": 480,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-201",
+    "name": "Fish Tacos (3)",
+    "description": "Beer-battered fish with cabbage slaw, crema, and lime",
+    "price": 13.99,
+    "restaurant_id": "REST-018",
+    "restaurant_name": "Taco Libre",
+    "category": "Tacos",
+    "dietary_tags": [],
+    "is_popular": true,
+    "calories": 480,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-202",
+    "name": "Chicken Katsu Curry",
+    "description": "Crispy breaded chicken cutlet with Japanese curry sauce and rice",
+    "price": 16.99,
+    "restaurant_id": "REST-037",
+    "restaurant_name": "Ocean Sushi Boat",
+    "category": "Entrees",
+    "dietary_tags": [],
+    "is_popular": true,
+    "calories": 680,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-203",
+    "name": "Veggie Spring Rolls (4pc)",
+    "description": "Crispy rolls filled with glass noodles, cabbage, carrots, and mushrooms",
+    "price": 7.99,
+    "restaurant_id": "REST-009",
+    "restaurant_name": "Pho Saigon",
+    "category": "Appetizers",
+    "dietary_tags": [
+      "vegetarian",
+      "vegan"
+    ],
+    "is_popular": false,
+    "calories": 280,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-204",
+    "name": "Dal Makhani",
+    "description": "Slow-cooked black lentils in creamy tomato sauce with butter",
+    "price": 14.99,
+    "restaurant_id": "REST-031",
+    "restaurant_name": "Tikka Flame",
+    "category": "Curries",
+    "dietary_tags": [
+      "vegetarian",
+      "gluten-free"
+    ],
+    "is_popular": true,
+    "calories": 420,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-205",
+    "name": "Passion Fruit Boba",
+    "description": "Fresh passion fruit green tea with popping boba pearls",
+    "price": 6.49,
+    "restaurant_id": "REST-033",
+    "restaurant_name": "Boba Tea House",
+    "category": "Drinks",
+    "dietary_tags": [
+      "vegetarian",
+      "vegan"
+    ],
+    "is_popular": true,
+    "calories": 280,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-206",
+    "name": "Mushroom Galette",
+    "description": "Buckwheat crepe with sauteed mushrooms, Gruyere, thyme, and arugula",
+    "price": 13.99,
+    "restaurant_id": "REST-034",
+    "restaurant_name": "Crepe Corner",
+    "category": "Savory Galettes",
+    "dietary_tags": [
+      "vegetarian",
+      "gluten-free"
+    ],
+    "is_popular": false,
+    "calories": 380,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-207",
+    "name": "Half Soy Garlic Half Yangnyeom (20pc)",
+    "description": "Mixed platter of soy garlic and spicy chicken wings",
+    "price": 28.99,
+    "restaurant_id": "REST-040",
+    "restaurant_name": "Korean Fried Chicken Co.",
+    "category": "Chicken",
+    "dietary_tags": [
+      "spicy"
+    ],
+    "is_popular": true,
+    "calories": 1200,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-208",
+    "name": "Aji de Gallina",
+    "description": "Shredded chicken in creamy walnut-aji amarillo sauce with rice and olives",
+    "price": 16.99,
+    "restaurant_id": "REST-042",
+    "restaurant_name": "La Cocina Peruana",
+    "category": "Entrees",
+    "dietary_tags": [
+      "contains-nuts",
+      "gluten-free"
+    ],
+    "is_popular": false,
+    "calories": 580,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-209",
+    "name": "Sicilian Slice",
+    "description": "Thick, square pan pizza with rich tomato sauce and extra cheese",
+    "price": 5.99,
+    "restaurant_id": "REST-044",
+    "restaurant_name": "Pizza Republic",
+    "category": "Slices",
+    "dietary_tags": [
+      "vegetarian"
+    ],
+    "is_popular": true,
+    "calories": 420,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  },
+  {
+    "id": "ITEM-210",
+    "name": "Kale Caesar Salad",
+    "description": "Tuscan kale with cashew Caesar dressing, crispy chickpeas, and hemp seeds",
+    "price": 13.99,
+    "restaurant_id": "REST-015",
+    "restaurant_name": "Green Leaf Salads",
+    "category": "Salads",
+    "dietary_tags": [
+      "vegetarian",
+      "vegan",
+      "gluten-free",
+      "contains-nuts"
+    ],
+    "is_popular": false,
+    "calories": 350,
+    "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400"
+  }
+]
