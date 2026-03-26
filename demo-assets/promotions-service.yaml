@@ -1,0 +1,653 @@
+openapi: "3.0.0"
+info:
+  title: DoorDash Promotions & Loyalty Service
+  version: "1.0.0"
+  description: |
+    Manages promotions, coupons, and customer loyalty programs for DoorDash.
+
+    This service powers the promotional engine behind DoorDash's marketing campaigns,
+    coupon validation, and the DashPass loyalty rewards program. It enables real-time
+    promo code validation at checkout, dynamic promotional content delivery, and
+    loyalty point management across all DoorDash platforms.
+
+    ## Key Features
+    - **Active Promotions** - Browse and filter currently running promotions
+    - **Promo Code Validation** - Real-time validation of promo codes against order context
+    - **Loyalty Points** - Track customer points balance, tier status, and transaction history
+    - **Point Redemption** - Convert loyalty points into order discounts
+
+  contact:
+    name: DoorDash Platform Engineering
+    email: platform-eng@doordash.com
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0
+
+servers:
+  - url: https://api.doordash.com/v1
+    description: Production
+  - url: https://api-staging.doordash.com/v1
+    description: Staging
+  - url: http://localhost:8080/v1
+    description: Local Development
+
+tags:
+  - name: Promotions
+    description: Manage and query active promotions and promo codes
+  - name: Loyalty
+    description: Customer loyalty points, tiers, and redemption
+
+paths:
+  /promotions/active:
+    get:
+      operationId: getActivePromotions
+      summary: List currently active promotions
+      description: |
+        Returns a list of all currently active promotions. Results can be filtered
+        by category and limited in count. Promotions are sorted by relevance, with
+        highest-value offers appearing first.
+      tags:
+        - Promotions
+      parameters:
+        - name: category
+          in: query
+          required: false
+          description: Filter promotions by target audience or type
+          schema:
+            type: string
+            enum:
+              - new_user
+              - returning
+              - seasonal
+              - restaurant_specific
+          example: new_user
+        - name: limit
+          in: query
+          required: false
+          description: Maximum number of promotions to return
+          schema:
+            type: integer
+            default: 10
+            minimum: 1
+            maximum: 50
+          example: 10
+      responses:
+        "200":
+          description: A list of active promotions
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  promotions:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/Promotion"
+                  total_count:
+                    type: integer
+                    description: Total number of active promotions matching the filter
+                    example: 5
+              example:
+                promotions:
+                  - id: "promo_001"
+                    title: "20% Off Your First Order"
+                    description: "Welcome to DoorDash! Enjoy 20% off your first order from any restaurant."
+                    discount_type: "percentage"
+                    discount_value: 20
+                    min_order_amount: 15.00
+                    valid_until: "2026-06-30T23:59:59Z"
+                    promo_code: "WELCOME20"
+                    applicable_restaurants: []
+                    category: "new_user"
+                    terms_and_conditions: "Valid for new customers only. Maximum discount $15. Cannot be combined with other offers."
+                  - id: "promo_002"
+                    title: "Free Delivery on Orders Over $25"
+                    description: "Skip the delivery fee on any order over $25. Available for all customers!"
+                    discount_type: "free_delivery"
+                    discount_value: 0
+                    min_order_amount: 25.00
+                    valid_until: "2026-04-30T23:59:59Z"
+                    promo_code: "FREEDEL25"
+                    applicable_restaurants: []
+                    category: "returning"
+                    terms_and_conditions: "Valid on orders $25+. Delivery fee waived up to $7.99."
+                  - id: "promo_003"
+                    title: "Buy 2 Rolls Get 1 Free at Sakura Sushi"
+                    description: "Order any two specialty rolls and get a third roll free at Sakura Sushi!"
+                    discount_type: "bogo"
+                    discount_value: 1
+                    min_order_amount: 0
+                    valid_until: "2026-05-15T23:59:59Z"
+                    promo_code: "SUSHIDEAL"
+                    applicable_restaurants:
+                      - "rest_sakura_001"
+                      - "rest_sakura_002"
+                    category: "restaurant_specific"
+                    terms_and_conditions: "Valid at participating Sakura Sushi locations. Third roll must be of equal or lesser value."
+                  - id: "promo_004"
+                    title: "$5 Off Your Next Order"
+                    description: "Save $5 on your next order of $20 or more. Because you deserve a treat!"
+                    discount_type: "fixed"
+                    discount_value: 5.00
+                    min_order_amount: 20.00
+                    valid_until: "2026-04-15T23:59:59Z"
+                    promo_code: "SAVE5"
+                    applicable_restaurants: []
+                    category: "returning"
+                    terms_and_conditions: "One use per customer. Minimum order $20 before taxes and fees."
+                  - id: "promo_005"
+                    title: "DashPass Members: 10% Off Everything"
+                    description: "Exclusive for DashPass members - enjoy 10% off every order this month!"
+                    discount_type: "percentage"
+                    discount_value: 10
+                    min_order_amount: 0
+                    valid_until: "2026-04-30T23:59:59Z"
+                    promo_code: "DASHPASS10"
+                    applicable_restaurants: []
+                    category: "returning"
+                    terms_and_conditions: "DashPass membership required. Maximum discount $25 per order."
+                total_count: 5
+        "400":
+          description: Invalid query parameters
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+
+  /promotions/validate:
+    post:
+      operationId: validatePromoCode
+      summary: Validate a promo code for an order
+      description: |
+        Validates whether a given promo code can be applied to a specific order.
+        Checks code validity, expiration, minimum order requirements, restaurant
+        eligibility, and customer usage limits. Returns the calculated discount
+        and updated order total if valid.
+      tags:
+        - Promotions
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ValidatePromoRequest"
+            example:
+              promo_code: "WELCOME20"
+              order_total: 42.50
+              restaurant_id: "rest_bobs_burgers_001"
+              customer_id: "cust_98765"
+      responses:
+        "200":
+          description: Promo code validation result
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ValidatePromoResponse"
+              examples:
+                valid_code:
+                  summary: Valid promo code
+                  value:
+                    valid: true
+                    discount_amount: 8.50
+                    new_total: 34.00
+                    promo_details:
+                      id: "promo_001"
+                      title: "20% Off Your First Order"
+                      discount_type: "percentage"
+                      discount_value: 20
+                    reason_if_invalid: null
+                invalid_code:
+                  summary: Invalid promo code - expired
+                  value:
+                    valid: false
+                    discount_amount: 0
+                    new_total: 42.50
+                    promo_details: null
+                    reason_if_invalid: "This promo code has expired. It was valid until 2026-01-31."
+                invalid_minimum:
+                  summary: Invalid promo code - minimum not met
+                  value:
+                    valid: false
+                    discount_amount: 0
+                    new_total: 12.99
+                    promo_details: null
+                    reason_if_invalid: "Minimum order amount of $15.00 not met. Your order total is $12.99."
+        "400":
+          description: Invalid request body
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "404":
+          description: Promo code not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+              example:
+                error:
+                  code: "PROMO_NOT_FOUND"
+                  message: "The promo code 'BADCODE' was not found."
+
+  /loyalty/points/{customer_id}:
+    get:
+      operationId: getLoyaltyPoints
+      summary: Get customer loyalty points balance
+      description: |
+        Retrieves the loyalty points balance, tier status, and recent transaction
+        history for a given customer. Includes information about how many points
+        are needed to reach the next tier level.
+      tags:
+        - Loyalty
+      parameters:
+        - name: customer_id
+          in: path
+          required: true
+          description: Unique identifier of the customer
+          schema:
+            type: string
+          example: "cust_98765"
+      responses:
+        "200":
+          description: Customer loyalty points information
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/LoyaltyPointsResponse"
+              example:
+                customer_id: "cust_98765"
+                points_balance: 2450
+                tier: "gold"
+                points_to_next_tier: 1280
+                lifetime_points: 8720
+                recent_transactions:
+                  - id: "txn_101"
+                    type: "earned"
+                    points: 150
+                    description: "Order #DD-88291 - Thai Basil Restaurant"
+                    date: "2026-03-25T19:32:00Z"
+                  - id: "txn_100"
+                    type: "earned"
+                    points: 85
+                    description: "Order #DD-88104 - Pizza Palace"
+                    date: "2026-03-23T12:15:00Z"
+                  - id: "txn_099"
+                    type: "redeemed"
+                    points: -500
+                    description: "Redeemed $5.00 discount on Order #DD-87990"
+                    date: "2026-03-20T20:45:00Z"
+                  - id: "txn_098"
+                    type: "earned"
+                    points: 200
+                    description: "Order #DD-87801 - Sakura Sushi"
+                    date: "2026-03-18T18:20:00Z"
+                  - id: "txn_097"
+                    type: "bonus"
+                    points: 500
+                    description: "Gold tier monthly bonus"
+                    date: "2026-03-01T00:00:00Z"
+        "404":
+          description: Customer not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+              example:
+                error:
+                  code: "CUSTOMER_NOT_FOUND"
+                  message: "No customer found with ID 'cust_00000'."
+
+  /loyalty/redeem:
+    post:
+      operationId: redeemLoyaltyPoints
+      summary: Redeem loyalty points for a discount
+      description: |
+        Redeems a specified number of loyalty points from a customer's balance
+        and applies a corresponding discount to an order. The conversion rate
+        is 100 points = $1.00 discount. Minimum redemption is 100 points.
+      tags:
+        - Loyalty
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/RedeemPointsRequest"
+            example:
+              customer_id: "cust_98765"
+              points_to_redeem: 500
+              order_id: "order_12345"
+      responses:
+        "200":
+          description: Points redemption result
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RedeemPointsResponse"
+              examples:
+                successful_redemption:
+                  summary: Successful point redemption
+                  value:
+                    success: true
+                    discount_amount: 5.00
+                    remaining_points: 1950
+                    transaction_id: "txn_102"
+                insufficient_points:
+                  summary: Insufficient points
+                  value:
+                    success: false
+                    discount_amount: 0
+                    remaining_points: 2450
+                    transaction_id: null
+                    error_message: "Insufficient points. You have 2,450 points but attempted to redeem 5,000."
+        "400":
+          description: Invalid request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "404":
+          description: Customer or order not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+
+components:
+  schemas:
+    Promotion:
+      type: object
+      required:
+        - id
+        - title
+        - description
+        - discount_type
+        - discount_value
+        - min_order_amount
+        - valid_until
+        - promo_code
+        - applicable_restaurants
+        - category
+      properties:
+        id:
+          type: string
+          description: Unique promotion identifier
+          example: "promo_001"
+        title:
+          type: string
+          description: Human-readable promotion title
+          example: "20% Off Your First Order"
+        description:
+          type: string
+          description: Detailed promotion description shown to customers
+          example: "Welcome to DoorDash! Enjoy 20% off your first order from any restaurant."
+        discount_type:
+          type: string
+          enum:
+            - percentage
+            - fixed
+            - free_delivery
+            - bogo
+          description: |
+            Type of discount applied:
+            - `percentage` - Percentage off the order total
+            - `fixed` - Fixed dollar amount off
+            - `free_delivery` - Delivery fee waived
+            - `bogo` - Buy one get one (value indicates free item count)
+          example: "percentage"
+        discount_value:
+          type: number
+          format: float
+          description: Numeric value of the discount (percentage points, dollar amount, or free item count)
+          example: 20
+        min_order_amount:
+          type: number
+          format: float
+          description: Minimum order subtotal required to use this promotion (0 means no minimum)
+          example: 15.00
+        valid_until:
+          type: string
+          format: date-time
+          description: Expiration timestamp for the promotion (ISO 8601)
+          example: "2026-06-30T23:59:59Z"
+        promo_code:
+          type: string
+          description: The code customers enter at checkout
+          example: "WELCOME20"
+        applicable_restaurants:
+          type: array
+          items:
+            type: string
+          description: List of restaurant IDs where this promo applies. Empty array means all restaurants.
+          example: []
+        category:
+          type: string
+          enum:
+            - new_user
+            - returning
+            - seasonal
+            - restaurant_specific
+          description: Target audience or promotion category
+          example: "new_user"
+        terms_and_conditions:
+          type: string
+          description: Legal terms and usage conditions
+          example: "Valid for new customers only. Maximum discount $15."
+
+    ValidatePromoRequest:
+      type: object
+      required:
+        - promo_code
+        - order_total
+        - customer_id
+      properties:
+        promo_code:
+          type: string
+          description: The promotion code to validate
+          example: "WELCOME20"
+        order_total:
+          type: number
+          format: float
+          description: Current order subtotal before discount
+          example: 42.50
+        restaurant_id:
+          type: string
+          description: Restaurant ID to check restaurant-specific promos (optional)
+          example: "rest_bobs_burgers_001"
+        customer_id:
+          type: string
+          description: Customer ID to check usage limits and eligibility
+          example: "cust_98765"
+
+    ValidatePromoResponse:
+      type: object
+      required:
+        - valid
+        - discount_amount
+        - new_total
+      properties:
+        valid:
+          type: boolean
+          description: Whether the promo code is valid for this order
+          example: true
+        discount_amount:
+          type: number
+          format: float
+          description: Calculated discount amount (0 if invalid)
+          example: 8.50
+        new_total:
+          type: number
+          format: float
+          description: Order total after applying the discount
+          example: 34.00
+        promo_details:
+          type: object
+          nullable: true
+          description: Details of the matched promotion (null if invalid)
+          properties:
+            id:
+              type: string
+              example: "promo_001"
+            title:
+              type: string
+              example: "20% Off Your First Order"
+            discount_type:
+              type: string
+              example: "percentage"
+            discount_value:
+              type: number
+              example: 20
+        reason_if_invalid:
+          type: string
+          nullable: true
+          description: Human-readable explanation if the code is invalid (null if valid)
+          example: null
+
+    LoyaltyPointsResponse:
+      type: object
+      required:
+        - customer_id
+        - points_balance
+        - tier
+        - points_to_next_tier
+        - lifetime_points
+        - recent_transactions
+      properties:
+        customer_id:
+          type: string
+          description: The customer's unique identifier
+          example: "cust_98765"
+        points_balance:
+          type: integer
+          description: Current available points balance
+          example: 2450
+        tier:
+          type: string
+          enum:
+            - silver
+            - gold
+            - platinum
+            - dashpass
+          description: |
+            Customer's current loyalty tier:
+            - `silver` - 0 to 2,999 lifetime points
+            - `gold` - 3,000 to 9,999 lifetime points
+            - `platinum` - 10,000+ lifetime points
+            - `dashpass` - Active DashPass subscriber (independent of points)
+          example: "gold"
+        points_to_next_tier:
+          type: integer
+          description: Points needed to reach the next tier (0 if at highest tier)
+          example: 550
+        lifetime_points:
+          type: integer
+          description: Total points earned across all time
+          example: 8720
+        recent_transactions:
+          type: array
+          items:
+            $ref: "#/components/schemas/LoyaltyTransaction"
+          description: Last 5 loyalty point transactions
+
+    LoyaltyTransaction:
+      type: object
+      required:
+        - id
+        - type
+        - points
+        - description
+        - date
+      properties:
+        id:
+          type: string
+          description: Unique transaction identifier
+          example: "txn_101"
+        type:
+          type: string
+          enum:
+            - earned
+            - redeemed
+            - bonus
+            - expired
+          description: Type of loyalty transaction
+          example: "earned"
+        points:
+          type: integer
+          description: Points involved (positive for earned/bonus, negative for redeemed/expired)
+          example: 150
+        description:
+          type: string
+          description: Human-readable description of the transaction
+          example: "Order #DD-88291 - Thai Basil Restaurant"
+        date:
+          type: string
+          format: date-time
+          description: When the transaction occurred (ISO 8601)
+          example: "2026-03-25T19:32:00Z"
+
+    RedeemPointsRequest:
+      type: object
+      required:
+        - customer_id
+        - points_to_redeem
+        - order_id
+      properties:
+        customer_id:
+          type: string
+          description: Customer whose points to redeem
+          example: "cust_98765"
+        points_to_redeem:
+          type: integer
+          description: Number of points to redeem (minimum 100, must be multiple of 100)
+          minimum: 100
+          example: 500
+        order_id:
+          type: string
+          description: Order to apply the points discount to
+          example: "order_12345"
+
+    RedeemPointsResponse:
+      type: object
+      required:
+        - success
+        - discount_amount
+        - remaining_points
+      properties:
+        success:
+          type: boolean
+          description: Whether the redemption was successful
+          example: true
+        discount_amount:
+          type: number
+          format: float
+          description: Dollar amount of discount applied (100 points = $1.00)
+          example: 5.00
+        remaining_points:
+          type: integer
+          description: Customer's points balance after redemption
+          example: 1950
+        transaction_id:
+          type: string
+          nullable: true
+          description: Transaction ID for the redemption (null if failed)
+          example: "txn_102"
+        error_message:
+          type: string
+          nullable: true
+          description: Error message if redemption failed
+          example: null
+
+    Error:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            code:
+              type: string
+              description: Machine-readable error code
+              example: "INVALID_REQUEST"
+            message:
+              type: string
+              description: Human-readable error description
+              example: "The request body is missing required fields."
